@@ -1,12 +1,13 @@
 .side-bar {
   height: 100%;
-  margin-top: 64px;
+  position: fixed;
 
   .side-memu-wrapper {
-    height: calc(100vh - 64px);
+    height: 100vh;
     background-color: #0c0e56;
     overflow-y: auto;
     transition: width 0.2s;
+    padding: 60px 0 0 0;
 
     &::-webkit-scrollbar {
       width: 6px;
