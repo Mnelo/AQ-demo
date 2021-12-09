@@ -130,8 +130,21 @@ class Page3 extends Component {
         </div>
 
         <div className="b-b">
-          <Button className="b-l">上一步</Button>
-          <Button type="primary" className="b-3">
+          <Button
+            className="b-l"
+            onClick={() => {
+              this.props.setContent(2);
+            }}
+          >
+            上一步
+          </Button>
+          <Button
+            type="primary"
+            className="b-3"
+            onClick={() => {
+              this.props.setContent(4);
+            }}
+          >
             下一步
           </Button>
         </div>

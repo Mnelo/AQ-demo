@@ -35,8 +35,21 @@ class Page2 extends Component {
         </div>
 
         <div className="bottom">
-          <Button className="b-1">返回 </Button>
-          <Button type="primary" className="b-2">
+          <Button
+            className="b-1"
+            onClick={() => {
+              this.props.setContent(1);
+            }}
+          >
+            返回{" "}
+          </Button>
+          <Button
+            type="primary"
+            className="b-2"
+            onClick={() => {
+              this.props.setContent(3);
+            }}
+          >
             自动分析
           </Button>
         </div>

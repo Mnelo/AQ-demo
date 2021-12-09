@@ -17,7 +17,12 @@ class Page1 extends Component {
         <div className="table">
           <div className="table-h">
             <div className="table-left">
-              <Button type="primary">
+              <Button
+                type="primary"
+                onClick={() => {
+                  this.props.setContent(2);
+                }}
+              >
                 <PlusOutlined />
                 新建
               </Button>
