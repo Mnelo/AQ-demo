@@ -1,3 +1,10 @@
 body {
-  background-color: rgba(248, 248, 248, 1);
+  height: auto;
+  background-color: rgba(248, 248, 248, 1)!important;
+  font-family: PingFangSC-Regular, PingFang SC;
+}
+
+.content-show {
+  margin: 64px 0 0 200px;
+  padding: 20px;
 }
