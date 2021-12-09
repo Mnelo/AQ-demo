@@ -1,0 +1,192 @@
+.side-bar {
+  height: 100%;
+  margin-top: 64px;
+
+  .side-memu-wrapper {
+    height: calc(100vh - 64px);
+    background-color: #0c0e56;
+    overflow-y: auto;
+    transition: width 0.2s;
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 6px;
+      background-color: rgba(255, 255, 255, 0.65);
+    }
+
+    .ant-menu.ant-menu-inline-collapsed
+      > .ant-menu-item-group
+      > .ant-menu-item-group-list
+      > .ant-menu-item
+      .ant-menu-item-icon
+      + span,
+    .ant-menu.ant-menu-inline-collapsed
+      > .ant-menu-item-group
+      > .ant-menu-item-group-list
+      > .ant-menu-item
+      .anticon
+      + span,
+    .ant-menu.ant-menu-inline-collapsed
+      > .ant-menu-item-group
+      > .ant-menu-item-group-list
+      > .ant-menu-submenu
+      > .ant-menu-submenu-title
+      .ant-menu-item-icon
+      + span,
+    .ant-menu.ant-menu-inline-collapsed
+      > .ant-menu-item-group
+      > .ant-menu-item-group-list
+      > .ant-menu-submenu
+      > .ant-menu-submenu-title
+      .anticon
+      + span,
+    .ant-menu.ant-menu-inline-collapsed > .ant-menu-item .ant-menu-item-icon + span,
+    .ant-menu.ant-menu-inline-collapsed > .ant-menu-item .anticon + span,
+    .ant-menu.ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title .ant-menu-item-icon + span,
+    .ant-menu.ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title .anticon + span {
+      max-width: 0;
+    }
+  }
+
+  .ant-menu-item {
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    margin: 12px 0 0 0;
+
+    a {
+      display: flex;
+      align-items: center;
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+
+  .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background-color: #2e306d;
+    color: rgba(255, 255, 255, 1);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background-color: #126ee3;
+    }
+
+    a {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+
+  .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-active {
+    background-color: #2e306d;
+    color: rgba(255, 255, 255, 1);
+
+    a {
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+
+  .ant-menu-inline .ant-menu-item-selected::after {
+    opacity: 0;
+  }
+
+  .ant-menu-item-group .ant-menu-item-group-title {
+    height: 48px;
+    margin-top: 12px;
+    font-size: 12px;
+    color: #fff;
+    line-height: 24px;
+
+    &::after {
+      content: '';
+      position: relative;
+      top: 11px;
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.15);
+    }
+  }
+}
+
+.collapsed-open {
+  width: 200px;
+
+  .side-memu-wrapper {
+    width: 200px;
+  }
+
+  .ant-menu {
+    width: 200px;
+    height: auto;
+    padding: 12px 0 0 0;
+    color: rgba(255, 255, 255, 1);
+    background: #0c0e56 !important;
+    border-right-color: #0c0e56;
+  }
+
+  .ant-menu-item {
+    padding: 0 18px !important;
+  }
+
+  .ant-menu-item-group .ant-menu-item-group-title {
+    padding: 12px 18px;
+  }
+}
+.ant-menu ol, .ant-menu ul {
+  margin-top: 11px !important;
+}
+
+// 导航收起
+.collapsed-close {
+  width: 56px;
+
+  .side-memu-wrapper {
+    width: 56px;
+  }
+
+  .ant-menu {
+    width: 56px;
+    height: auto;
+    padding: 12px 0 0 0;
+    color: rgba(255, 255, 255, 1);
+    background: #0c0e56 !important;
+    border-right-color: #0c0e56;
+  }
+
+  .ant-menu-inline-collapsed > .ant-menu-item,
+  .ant-menu-inline-collapsed > .ant-menu-item-group > .ant-menu-item-group-list > .ant-menu-item,
+  .ant-menu-inline-collapsed
+    > .ant-menu-item-group
+    > .ant-menu-item-group-list
+    > .ant-menu-submenu
+    > .ant-menu-submenu-title,
+  .ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title {
+    padding: 0 15px;
+  }
+
+  .ant-menu-inline-collapsed .ant-menu-item-group-title {
+    padding: 12px 8px ;
+    text-align: center;
+  }
+  .ant-menu-item-group-title {
+    padding: 12px 8px ;
+    text-align: center;
+  }
+  .ant-menu-item a {
+    justify-content: center;
+
+    .anticon {
+      line-height: 0px !important;
+    }
+  }
+}
+
+
+
