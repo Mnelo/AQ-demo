@@ -7,6 +7,7 @@ import Page2 from "./Component/Page2";
 import Page3 from "./Component/Page3";
 import Page4 from "./Component/Page4";
 import Page5 from "./Component/Page5";
+import KnowledgePage from "./Component/KnowledgePage";
 import "antd/dist/antd.css";
 import "./App.css";
 import "antd/dist/antd.min.css";
@@ -29,6 +30,7 @@ const App = () => {
         {content === 3 ? <Page3 setContent={setContent} /> : null}
         {content === 4 ? <Page4 setContent={setContent} /> : null}
         {content === 5 ? <Page5 setContent={setContent} /> : null}
+        <KnowledgePage />
       </div>
     </div>
   );
