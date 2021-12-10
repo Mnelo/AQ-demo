@@ -4,6 +4,7 @@ import jiqiren from "../../Asset/Image/jiqiren.svg";
 import rentou from "../../Asset/Image/rentou.svg";
 import st from "../../Asset/Image/4-4.svg";
 import t1 from "../../Asset/Image/t1.jpg";
+import bg from "../../Asset/Image/bg.png";
 import word from "../../Asset/Image/word.svg";
 import xls from "../../Asset/Image/xls.svg";
 import "./style.less";
@@ -69,7 +70,39 @@ class AQ extends Component {
               <div className="c-c">400r/min</div>
             </div>,
           ],
-          rightC: "D130H70/压缩机/的/转速/是/多少/",
+          rightC: (
+            <div className="fc">
+              <div
+                style={{
+                  borderBottom: "2px solid #FF8600",
+                  marginRight: "4px",
+                  marginLeft: "4px",
+                }}
+              >
+                D130H70
+              </div>
+              <div
+                style={{
+                  borderBottom: "2px solid #019688",
+                  marginRight: "4px",
+                  marginLeft: "4px",
+                }}
+              >
+                压缩机
+              </div>
+              <div>的</div>
+              <div
+                style={{
+                  borderBottom: "2px solid #0091FF",
+                  marginRight: "4px",
+                  marginLeft: "4px",
+                }}
+              >
+                转速
+              </div>
+              <div>是多少</div>
+            </div>
+          ),
           rightL: [
             "设备型号=D130H70",
             "设备类型=压缩机",
@@ -99,8 +132,59 @@ class AQ extends Component {
               <div className="c-c">ZW-0.84</div>
             </div>,
           ],
-          rightC:
-            "晨阳/产/的/压缩机/里/哪/台/转速/是/600r/min/并且/用/的/是/氢气",
+          rightC: (
+            <div className="fc">
+              <div
+                style={{
+                  borderBottom: "2px solid #FF8600",
+                  marginRight: "4px",
+                  marginLeft: "4px",
+                }}
+              >
+                晨阳
+              </div>
+              <div>产的</div>
+              <div
+                style={{
+                  borderBottom: "2px solid #019688",
+                  marginRight: "4px",
+                  marginLeft: "4px",
+                }}
+              >
+                压缩机
+              </div>
+              <div>里哪台</div>
+              <div
+                style={{
+                  borderBottom: "2px solid #0091FF",
+                  marginRight: "4px",
+                  marginLeft: "4px",
+                }}
+              >
+                转速
+              </div>
+              <div>是</div>
+              <div
+                style={{
+                  borderBottom: "2px solid #00FA9A",
+                  marginRight: "4px",
+                  marginLeft: "4px",
+                }}
+              >
+                600rmin
+              </div>
+              <div>并且用的是</div>
+              <div
+                style={{
+                  borderBottom: "2px solid #00FA9A",
+                  marginRight: "4px",
+                  marginLeft: "4px",
+                }}
+              >
+                氢气
+              </div>
+            </div>
+          ),
           rightL: [
             "生产厂商=泰州市晨阳压缩机有限公司",
             "设备类型=压缩机",
@@ -136,7 +220,47 @@ class AQ extends Component {
               </div>
             </div>,
           ],
-          rightC: "晨阳/无油润滑煤气/压缩机/的/注意/事项",
+          rightC: (
+            <div className="fc">
+              <div
+                style={{
+                  borderBottom: "2px solid #FF8600",
+                  marginRight: "4px",
+                  marginLeft: "4px",
+                }}
+              >
+                晨阳
+              </div>
+              <div
+                style={{
+                  borderBottom: "2px solid #0091FF",
+                  marginRight: "4px",
+                  marginLeft: "4px",
+                }}
+              >
+                无油润滑煤气
+              </div>
+              <div
+                style={{
+                  borderBottom: "2px solid #019688",
+                  marginRight: "4px",
+                  marginLeft: "4px",
+                }}
+              >
+                压缩机
+              </div>
+              <div>的</div>
+              <div
+                style={{
+                  borderBottom: "2px solid #00FA9A",
+                  marginRight: "4px",
+                  marginLeft: "4px",
+                }}
+              >
+                注意事项
+              </div>
+            </div>
+          ),
           rightL: [
             "生产厂商=泰州市晨阳压缩机有限公司",
             "设备类型=压缩机",
@@ -167,8 +291,51 @@ class AQ extends Component {
               <div className="c-c">设备编号为A0001电动机的转速为740r/min</div>
             </div>,
           ],
-          rightC: "A0001/的/压缩机/的/电机/的/转速/多/大",
-          rightL: ["设备=压缩机", "设备编号=A0001"],
+          rightC: (
+            <div className="fc">
+              <div
+                style={{
+                  borderBottom: "2px solid #019688",
+                  marginRight: "4px",
+                  marginLeft: "4px",
+                }}
+              >
+                A0001
+              </div>
+              <div>的</div>
+              <div
+                style={{
+                  borderBottom: "2px solid #FF8600",
+                  marginRight: "4px",
+                  marginLeft: "4px",
+                }}
+              >
+                压缩机
+              </div>
+              <div>的</div>
+              <div
+                style={{
+                  borderBottom: "2px solid #00FA9A",
+                  marginRight: "4px",
+                  marginLeft: "4px",
+                }}
+              >
+                电机
+              </div>
+              <div>的</div>
+              <div
+                style={{
+                  borderBottom: "2px solid #0091FF",
+                  marginRight: "4px",
+                  marginLeft: "4px",
+                }}
+              >
+                转速
+              </div>
+              <div>多大</div>
+            </div>
+          ),
+          rightL: ["设备=压缩机", "设备编号=A0001", "属性：转速", "部件=电机"],
           doc: ["LW-44 说明书.doc"],
         },
         () => {
@@ -186,14 +353,59 @@ class AQ extends Component {
         {
           leftC: [
             ...leftC,
-            <div className="left-box">
-              <div className="h-i">
-                <img src={jiqiren} alt="" className="icon" />
+            <>
+              <div className="left-box">
+                <div className="h-i">
+                  <img src={jiqiren} alt="" className="icon" />
+                </div>
+                <div className="c-c">5</div>
               </div>
-              <div className="c-c">5</div>
-            </div>,
+
+              <div className="left-box left-box-t1">
+                <div className="h-i">
+                  <img src={jiqiren} alt="" className="icon" />
+                </div>
+
+                <div className="c-t1">
+                  <img src={bg} alt="" className="icon-t1" />
+                </div>
+              </div>
+            </>,
           ],
-          rightC: "过去一年/LW-44/型号/压缩机/发生/过/多少/次/故障",
+          rightC: (
+            <div className="fc">
+              <div
+                style={{
+                  borderBottom: "2px solid #FF8600",
+                  marginRight: "4px",
+                  marginLeft: "4px",
+                }}
+              >
+                过去一年
+              </div>
+
+              <div
+                style={{
+                  borderBottom: "2px solid #0091FF",
+                  marginRight: "4px",
+                  marginLeft: "4px",
+                }}
+              >
+                LW-44
+              </div>
+              <div>型号</div>
+              <div
+                style={{
+                  borderBottom: "2px solid #019688",
+                  marginRight: "4px",
+                  marginLeft: "4px",
+                }}
+              >
+                压缩机
+              </div>
+              <div>发生过多少次故障</div>
+            </div>
+          ),
           rightL: [
             "日期：2021年1月-2021年12月",
             "设备类型=压缩机",
@@ -223,7 +435,32 @@ class AQ extends Component {
               <div className="c-c">ZW-0.84</div>
             </div>,
           ],
-          rightC: "哪一/台/压缩机/的/进气量/比较/大",
+          rightC: (
+            <div className="fc">
+              {/* "哪一/台/压缩机/的/进气量/比较/大" */}
+              <div>哪一台</div>
+              <div
+                style={{
+                  borderBottom: "2px solid #FF8600",
+                  marginRight: "4px",
+                  marginLeft: "4px",
+                }}
+              >
+                压缩机
+              </div>
+              <div>的</div>
+              <div
+                style={{
+                  borderBottom: "2px solid #019688",
+                  marginRight: "4px",
+                  marginLeft: "4px",
+                }}
+              >
+                进气量
+              </div>
+              <div>比较大</div>
+            </div>
+          ),
           rightL: ["设备类型= 压缩机", "属性=进气量"],
           doc: ["LW-44 说明书.doc", "ZW-0.84 说明书.doc", "D130H70 说明书.doc"],
         },
@@ -250,8 +487,8 @@ class AQ extends Component {
                 <div className="line">
                   <div className="box box-1">设备</div>
                   <div className="box box-2">设备型号</div>
-                  <div className="box box-3">点机型号</div>
-                  <div className="box box-4">转数</div>
+                  <div className="box box-3">电机型号</div>
+                  <div className="box box-4">转速</div>
                 </div>
                 <div className="line">
                   <div className="box box-1">压缩机</div>
@@ -268,8 +505,64 @@ class AQ extends Component {
               </div>
             </div>,
           ],
-          rightC: "D130H70/与/LW-44/压缩机/分别/用/了/什么/电动机/转速/是/多少",
-          rightL: ["设备类型= 压缩机", "设备型号=D130H70， LW-44"],
+          rightC: (
+            <div className="fc">
+              <div
+                style={{
+                  borderBottom: "2px solid #019688",
+                  marginRight: "4px",
+                  marginLeft: "4px",
+                }}
+              >
+                D130H70
+              </div>
+              <div>与</div>
+              <div
+                style={{
+                  borderBottom: "2px solid #019688",
+                  marginRight: "4px",
+                  marginLeft: "4px",
+                }}
+              >
+                LW-44
+              </div>
+              <div
+                style={{
+                  borderBottom: "2px solid #FF8600",
+                  marginRight: "4px",
+                  marginLeft: "4px",
+                }}
+              >
+                压缩机
+              </div>
+              <div>分别用了什么</div>
+              <div
+                style={{
+                  borderBottom: "2px solid #0091FF",
+                  marginRight: "4px",
+                  marginLeft: "4px",
+                }}
+              >
+                电动机
+              </div>
+              <div
+                style={{
+                  borderBottom: "2px solid #00FA9A",
+                  marginRight: "4px",
+                  marginLeft: "4px",
+                }}
+              >
+                转速
+              </div>
+              <div>是多少</div>
+            </div>
+          ),
+          rightL: [
+            "设备类型= 压缩机",
+            "设备型号=D130H70， LW-44",
+            "部件=电机",
+            "属性：转速",
+          ],
           doc: ["D130H70 说明书.doc", "LW-44 说明书.doc"],
         },
         () => {
@@ -294,7 +587,30 @@ class AQ extends Component {
               <div className="c-c">LW-44型压缩机；D130H70型压缩机</div>
             </div>,
           ],
-          rightC: "张三/管理/着/哪些/型号/的/设备",
+          rightC: (
+            <div className="fc">
+              <div
+                style={{
+                  borderBottom: "2px solid #FF8600",
+                  marginRight: "4px",
+                  marginLeft: "4px",
+                }}
+              >
+                张三
+              </div>
+              <div>管理着哪些</div>
+              <div
+                style={{
+                  borderBottom: "2px solid #019688",
+                  marginRight: "4px",
+                  marginLeft: "4px",
+                }}
+              >
+                型号
+              </div>
+              <div>的设备</div>
+            </div>
+          ),
           rightL: ["责任人：张三", "属性：型号"],
           ts: true,
           doc: ["设备运维信息表.xlsx"],
@@ -323,13 +639,32 @@ class AQ extends Component {
               </div>
             </div>,
           ],
-          rightC: "我们/这个/压缩机/的/生产/厂商/是/哪个",
-          rightL: [
-            "设备类型=压缩机",
-            "设备型号= None",
-            "设备编号=None",
-            "属性=生产厂商",
-          ],
+          rightC: (
+            <div className="fc">
+              <div>我们这个</div>
+              <div
+                style={{
+                  borderBottom: "2px solid #FF8600",
+                  marginRight: "4px",
+                  marginLeft: "4px",
+                }}
+              >
+                压缩机
+              </div>
+              <div>的</div>
+              <div
+                style={{
+                  borderBottom: "2px solid #019688",
+                  marginRight: "4px",
+                  marginLeft: "4px",
+                }}
+              >
+                生产厂商
+              </div>
+              <div>是哪个</div>
+            </div>
+          ),
+          rightL: ["设备类型=压缩机", "属性=生产厂商"],
           doc: [],
         },
         () => {
@@ -354,7 +689,46 @@ class AQ extends Component {
               <div className="c-c">北京天高隔膜压缩机有限公司</div>
             </div>,
           ],
-          rightC: "我们/这个/压缩机/的/生产/厂商/是/哪个",
+          rightC: (
+            <div className="ml">
+              <div className="fc">
+                <div>我们这个</div>
+                <div
+                  style={{
+                    borderBottom: "2px solid #FF8600",
+                    marginRight: "4px",
+                    marginLeft: "4px",
+                  }}
+                >
+                  压缩机
+                </div>
+                <div>的</div>
+                <div
+                  style={{
+                    borderBottom: "2px solid #0091FF",
+                    marginRight: "4px",
+                    marginLeft: "4px",
+                  }}
+                >
+                  生产厂商
+                </div>
+                <div>是哪个</div>
+              </div>
+              <div className="fc fc-s">
+                <div>型号为</div>
+                <div
+                  style={{
+                    borderBottom: "2px solid #019688",
+                    marginRight: "4px",
+                    marginLeft: "4px",
+                  }}
+                >
+                  D130H70
+                </div>
+                <div>的</div>
+              </div>
+            </div>
+          ),
           rightL: ["设备类型=压缩机", "设备型号= D130H70", "属性=生产厂商"],
           doc: ["设备信息表.xlsx"],
         },
@@ -382,7 +756,30 @@ class AQ extends Component {
               </div>
             </div>,
           ],
-          rightC: "张三/管理/的/设备/各/型号/的/数量",
+          rightC: (
+            <div className="fc">
+              <div
+                style={{
+                  borderBottom: "2px solid #FF8600",
+                  marginRight: "4px",
+                  marginLeft: "4px",
+                }}
+              >
+                张三
+              </div>
+              <div>管理的设备各</div>
+              <div
+                style={{
+                  borderBottom: "2px solid #019688",
+                  marginRight: "4px",
+                  marginLeft: "4px",
+                }}
+              >
+                型号
+              </div>
+              <div>的数量</div>
+            </div>
+          ),
           rightL: ["责任人：张三", "属性：型号"],
           doc: ["设备运维信息表.xlsx"],
         },
@@ -407,7 +804,9 @@ class AQ extends Component {
             <div className="c-c">无内容</div>
           </div>,
         ],
+        rightL: [],
         doc: [],
+        rightC: [],
       },
       () => {
         if (document.getElementById("srollB")) {
@@ -492,7 +891,6 @@ class AQ extends Component {
           </div>
         </div>
         <div className="right">
-          <div className="title">分词</div>
           <div className="w-1">{rightC}</div>
           <div className="title t-m">语义理解</div>
           {rightL.map((item, index) => {
