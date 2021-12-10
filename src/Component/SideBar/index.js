@@ -16,7 +16,7 @@ class SideBar extends Component {
 
   handleClick = (e) => {
     if (e.key === "1") {
-      this.props.setContent(0);
+      this.props.setContent(6);
     }
 
     if (e.key === "2") {

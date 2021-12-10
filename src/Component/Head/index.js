@@ -9,7 +9,12 @@ class Head extends Component {
     return (
       <div className="head-box">
         <div className="head-left">
-          <div className="img">
+          <div
+            className="img"
+            onClick={() => {
+              this.props.setType(0);
+            }}
+          >
             <img className="logo-img" src={Logo} alt="AnyDATA" />
           </div>
 

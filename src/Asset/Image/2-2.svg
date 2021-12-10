@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="828px" height="635px" viewBox="0 0 828 635" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组 14</title>
+    <defs>
+        <filter x="-25.0%" y="-70.6%" width="150.0%" height="241.2%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="4" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-25.0%" y="-70.6%" width="150.0%" height="241.2%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="4" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-2.7%" y="-2.5%" width="104.7%" height="105.5%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-2.7%" y="-2.5%" width="104.7%" height="105.5%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-1.9%" y="-3.5%" width="103.3%" height="108.4%" filterUnits="objectBoundingBox" id="filter-5">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-1.9%" y="-3.5%" width="103.3%" height="108.4%" filterUnits="objectBoundingBox" id="filter-6">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-2.9%" y="-2.1%" width="105.6%" height="103.6%" filterUnits="objectBoundingBox" id="filter-7">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-2.9%" y="-2.1%" width="105.6%" height="103.6%" filterUnits="objectBoundingBox" id="filter-8">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-5.7%" y="-11.2%" width="112.5%" height="123.0%" filterUnits="objectBoundingBox" id="filter-9">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-5.7%" y="-11.2%" width="112.5%" height="123.0%" filterUnits="objectBoundingBox" id="filter-10">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-1.8%" y="-827.3%" width="102.6%" height="1661.8%" filterUnits="objectBoundingBox" id="filter-11">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-1.8%" y="-827.3%" width="102.6%" height="1661.8%" filterUnits="objectBoundingBox" id="filter-12">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-6.3%" y="-5.7%" width="111.9%" height="110.7%" filterUnits="objectBoundingBox" id="filter-13">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-6.3%" y="-5.7%" width="111.9%" height="110.7%" filterUnits="objectBoundingBox" id="filter-14">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-5.6%" y="-3.2%" width="111.8%" height="105.6%" filterUnits="objectBoundingBox" id="filter-15">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-5.6%" y="-3.2%" width="111.8%" height="105.6%" filterUnits="objectBoundingBox" id="filter-16">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-4.9%" y="-3.0%" width="109.3%" height="106.5%" filterUnits="objectBoundingBox" id="filter-17">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-4.9%" y="-3.0%" width="109.3%" height="106.5%" filterUnits="objectBoundingBox" id="filter-18">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-6.6%" y="-3.7%" width="112.8%" height="106.7%" filterUnits="objectBoundingBox" id="filter-19">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-6.6%" y="-3.7%" width="112.8%" height="106.7%" filterUnits="objectBoundingBox" id="filter-20">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-2.7%" y="-3.8%" width="105.8%" height="107.3%" filterUnits="objectBoundingBox" id="filter-21">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-2.7%" y="-3.8%" width="105.8%" height="107.3%" filterUnits="objectBoundingBox" id="filter-22">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-2.1%" y="-3.1%" width="103.6%" height="105.9%" filterUnits="objectBoundingBox" id="filter-23">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-2.1%" y="-3.1%" width="103.6%" height="105.9%" filterUnits="objectBoundingBox" id="filter-24">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-3.4%" y="-2.1%" width="106.6%" height="103.8%" filterUnits="objectBoundingBox" id="filter-25">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-3.4%" y="-2.1%" width="106.6%" height="103.8%" filterUnits="objectBoundingBox" id="filter-26">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-2.9%" y="-3.9%" width="106.2%" height="107.8%" filterUnits="objectBoundingBox" id="filter-27">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-2.9%" y="-3.9%" width="106.2%" height="107.8%" filterUnits="objectBoundingBox" id="filter-28">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-4.3%" y="-2.0%" width="109.6%" height="103.7%" filterUnits="objectBoundingBox" id="filter-29">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-4.3%" y="-2.0%" width="109.6%" height="103.7%" filterUnits="objectBoundingBox" id="filter-30">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-4.8%" y="-3.2%" width="110.0%" height="105.4%" filterUnits="objectBoundingBox" id="filter-31">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-4.8%" y="-3.2%" width="110.0%" height="105.4%" filterUnits="objectBoundingBox" id="filter-32">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-4.3%" y="-4.9%" width="108.0%" height="110.2%" filterUnits="objectBoundingBox" id="filter-33">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-4.3%" y="-4.9%" width="108.0%" height="110.2%" filterUnits="objectBoundingBox" id="filter-34">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-0.9%" y="-1.7%" width="101.3%" height="104.2%" filterUnits="objectBoundingBox" id="filter-35">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-0.9%" y="-1.7%" width="101.3%" height="104.2%" filterUnits="objectBoundingBox" id="filter-36">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-6.7%" y="-15.3%" width="111.7%" height="127.7%" filterUnits="objectBoundingBox" id="filter-37">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-6.7%" y="-15.3%" width="111.7%" height="127.7%" filterUnits="objectBoundingBox" id="filter-38">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-2.0%" y="-1.5%" width="103.7%" height="103.2%" filterUnits="objectBoundingBox" id="filter-39">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-2.0%" y="-1.5%" width="103.7%" height="103.2%" filterUnits="objectBoundingBox" id="filter-40">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-2.5%" y="-1.3%" width="104.8%" height="102.9%" filterUnits="objectBoundingBox" id="filter-41">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-2.5%" y="-1.3%" width="104.8%" height="102.9%" filterUnits="objectBoundingBox" id="filter-42">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-3.8%" y="-3.8%" width="106.9%" height="106.9%" filterUnits="objectBoundingBox" id="filter-43">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-3.8%" y="-3.8%" width="106.9%" height="106.9%" filterUnits="objectBoundingBox" id="filter-44">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-12.5%" y="-17.6%" width="125.0%" height="135.3%" filterUnits="objectBoundingBox" id="filter-45">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-12.5%" y="-17.6%" width="125.0%" height="135.3%" filterUnits="objectBoundingBox" id="filter-46">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-12.5%" y="-17.6%" width="125.0%" height="135.3%" filterUnits="objectBoundingBox" id="filter-47">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-12.5%" y="-17.6%" width="125.0%" height="135.3%" filterUnits="objectBoundingBox" id="filter-48">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-25.0%" y="-35.3%" width="150.0%" height="170.6%" filterUnits="objectBoundingBox" id="filter-49">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-25.0%" y="-35.3%" width="150.0%" height="170.6%" filterUnits="objectBoundingBox" id="filter-50">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-25.0%" y="-35.3%" width="150.0%" height="170.6%" filterUnits="objectBoundingBox" id="filter-51">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-25.0%" y="-35.3%" width="150.0%" height="170.6%" filterUnits="objectBoundingBox" id="filter-52">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-25.0%" y="-35.3%" width="150.0%" height="170.6%" filterUnits="objectBoundingBox" id="filter-53">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-25.0%" y="-35.3%" width="150.0%" height="170.6%" filterUnits="objectBoundingBox" id="filter-54">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-25.0%" y="-35.3%" width="150.0%" height="170.6%" filterUnits="objectBoundingBox" id="filter-55">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-25.0%" y="-35.3%" width="150.0%" height="170.6%" filterUnits="objectBoundingBox" id="filter-56">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-12.5%" y="-17.6%" width="125.0%" height="135.3%" filterUnits="objectBoundingBox" id="filter-57">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-12.5%" y="-17.6%" width="125.0%" height="135.3%" filterUnits="objectBoundingBox" id="filter-58">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-25.0%" y="-35.3%" width="150.0%" height="170.6%" filterUnits="objectBoundingBox" id="filter-59">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-25.0%" y="-35.3%" width="150.0%" height="170.6%" filterUnits="objectBoundingBox" id="filter-60">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-12.5%" y="-17.6%" width="125.0%" height="135.3%" filterUnits="objectBoundingBox" id="filter-61">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-12.5%" y="-17.6%" width="125.0%" height="135.3%" filterUnits="objectBoundingBox" id="filter-62">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-16.7%" y="-35.3%" width="133.3%" height="170.6%" filterUnits="objectBoundingBox" id="filter-63">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-16.7%" y="-35.3%" width="133.3%" height="170.6%" filterUnits="objectBoundingBox" id="filter-64">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-25.0%" y="-35.3%" width="150.0%" height="170.6%" filterUnits="objectBoundingBox" id="filter-65">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-25.0%" y="-35.3%" width="150.0%" height="170.6%" filterUnits="objectBoundingBox" id="filter-66">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-12.5%" y="-17.6%" width="125.0%" height="135.3%" filterUnits="objectBoundingBox" id="filter-67">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-12.5%" y="-17.6%" width="125.0%" height="135.3%" filterUnits="objectBoundingBox" id="filter-68">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-25.0%" y="-35.3%" width="150.0%" height="170.6%" filterUnits="objectBoundingBox" id="filter-69">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-25.0%" y="-35.3%" width="150.0%" height="170.6%" filterUnits="objectBoundingBox" id="filter-70">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-12.5%" y="-35.3%" width="125.0%" height="170.6%" filterUnits="objectBoundingBox" id="filter-71">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-12.5%" y="-35.3%" width="125.0%" height="170.6%" filterUnits="objectBoundingBox" id="filter-72">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-16.7%" y="-35.3%" width="133.3%" height="170.6%" filterUnits="objectBoundingBox" id="filter-73">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-16.7%" y="-35.3%" width="133.3%" height="170.6%" filterUnits="objectBoundingBox" id="filter-74">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-25.0%" y="-35.3%" width="150.0%" height="170.6%" filterUnits="objectBoundingBox" id="filter-75">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-25.0%" y="-35.3%" width="150.0%" height="170.6%" filterUnits="objectBoundingBox" id="filter-76">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-6.2%" y="-17.6%" width="112.5%" height="135.3%" filterUnits="objectBoundingBox" id="filter-77">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-6.2%" y="-17.6%" width="112.5%" height="135.3%" filterUnits="objectBoundingBox" id="filter-78">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-12.5%" y="-17.6%" width="125.0%" height="135.3%" filterUnits="objectBoundingBox" id="filter-79">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-12.5%" y="-17.6%" width="125.0%" height="135.3%" filterUnits="objectBoundingBox" id="filter-80">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-16.7%" y="-35.3%" width="133.3%" height="170.6%" filterUnits="objectBoundingBox" id="filter-81">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-16.7%" y="-35.3%" width="133.3%" height="170.6%" filterUnits="objectBoundingBox" id="filter-82">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-9.4%" y="-9.4%" width="118.8%" height="118.8%" filterUnits="objectBoundingBox" id="filter-83">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-5.8%" y="-16.7%" width="111.5%" height="133.3%" filterUnits="objectBoundingBox" id="filter-84">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-5.8%" y="-16.7%" width="111.5%" height="133.3%" filterUnits="objectBoundingBox" id="filter-85">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-9.4%" y="-9.4%" width="118.8%" height="118.8%" filterUnits="objectBoundingBox" id="filter-86">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-11.5%" y="-16.7%" width="123.1%" height="133.3%" filterUnits="objectBoundingBox" id="filter-87">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-11.5%" y="-16.7%" width="123.1%" height="133.3%" filterUnits="objectBoundingBox" id="filter-88">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-9.4%" y="-9.4%" width="118.8%" height="118.8%" filterUnits="objectBoundingBox" id="filter-89">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-5.8%" y="-16.7%" width="111.5%" height="133.3%" filterUnits="objectBoundingBox" id="filter-90">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-5.8%" y="-16.7%" width="111.5%" height="133.3%" filterUnits="objectBoundingBox" id="filter-91">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-9.4%" y="-9.4%" width="118.8%" height="118.8%" filterUnits="objectBoundingBox" id="filter-92">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-11.5%" y="-16.7%" width="123.1%" height="133.3%" filterUnits="objectBoundingBox" id="filter-93">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-11.5%" y="-16.7%" width="123.1%" height="133.3%" filterUnits="objectBoundingBox" id="filter-94">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-15.6%" y="-15.6%" width="131.2%" height="131.2%" filterUnits="objectBoundingBox" id="filter-95">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-11.5%" y="-16.7%" width="123.1%" height="133.3%" filterUnits="objectBoundingBox" id="filter-96">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-11.5%" y="-16.7%" width="123.1%" height="133.3%" filterUnits="objectBoundingBox" id="filter-97">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-15.6%" y="-15.6%" width="131.2%" height="131.2%" filterUnits="objectBoundingBox" id="filter-98">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-23.1%" y="-33.3%" width="146.2%" height="166.7%" filterUnits="objectBoundingBox" id="filter-99">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-23.1%" y="-33.3%" width="146.2%" height="166.7%" filterUnits="objectBoundingBox" id="filter-100">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-15.6%" y="-15.6%" width="131.2%" height="131.2%" filterUnits="objectBoundingBox" id="filter-101">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-35.3%" y="-33.3%" width="170.6%" height="166.7%" filterUnits="objectBoundingBox" id="filter-102">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-35.3%" y="-33.3%" width="170.6%" height="166.7%" filterUnits="objectBoundingBox" id="filter-103">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-15.6%" y="-15.6%" width="131.2%" height="131.2%" filterUnits="objectBoundingBox" id="filter-104">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-23.1%" y="-33.3%" width="146.2%" height="166.7%" filterUnits="objectBoundingBox" id="filter-105">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-23.1%" y="-33.3%" width="146.2%" height="166.7%" filterUnits="objectBoundingBox" id="filter-106">
+            <feGaussianBlur stdDeviation="2" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-9.4%" y="-9.4%" width="118.8%" height="118.8%" filterUnits="objectBoundingBox" id="filter-107">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-11.5%" y="-16.7%" width="123.1%" height="133.3%" filterUnits="objectBoundingBox" id="filter-108">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-11.5%" y="-16.7%" width="123.1%" height="133.3%" filterUnits="objectBoundingBox" id="filter-109">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-9.4%" y="-9.4%" width="118.8%" height="118.8%" filterUnits="objectBoundingBox" id="filter-110">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-11.5%" y="-16.7%" width="123.1%" height="133.3%" filterUnits="objectBoundingBox" id="filter-111">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-11.5%" y="-16.7%" width="123.1%" height="133.3%" filterUnits="objectBoundingBox" id="filter-112">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-9.4%" y="-9.4%" width="118.8%" height="118.8%" filterUnits="objectBoundingBox" id="filter-113">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-11.5%" y="-16.7%" width="123.1%" height="133.3%" filterUnits="objectBoundingBox" id="filter-114">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-11.5%" y="-16.7%" width="123.1%" height="133.3%" filterUnits="objectBoundingBox" id="filter-115">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="编组-14" transform="translate(5.000000, 3.000000)">
+            <text id="发生位置" filter="url(#filter-2)" transform="translate(367.149650, 233.178760) rotate(45.000000) translate(-367.149650, -233.178760) " font-family="PingFangSC-Medium, PingFang SC" font-size="12" font-weight="400" fill="#555555">
+                <tspan x="343.14965" y="237.67876">发生位置</tspan>
+            </text>
+            <path id="路径-2" d="M281.079758,163.212247 L281.723813,163.977227 L155.422,270.313 L157.998786,273.373206 L148.215725,275.72729 L152.202294,266.488391 L154.778,269.548 L281.079758,163.212247 Z" fill="#557EE8" fill-rule="nonzero" filter="url(#filter-4)"></path>
+            <path id="路径-5" d="M498.297358,62.0429047 L498.702642,62.9570953 L315.868,144.012 L317.489713,147.66894 L307.438217,147.202642 L313.842153,139.441225 L315.463,143.097 L498.297358,62.0429047 Z" fill="#A5A8B4" fill-rule="nonzero" filter="url(#filter-6)"></path>
+            <path id="路径-6" d="M139.341078,317.170422 L147.851315,322.539394 L144.429,324.61 L248.927737,497.241078 L248.072263,497.758922 L143.573,325.128 L140.152043,327.199995 L139.341078,317.170422 Z" fill="#68798E" fill-rule="nonzero" filter="url(#filter-8)"></path>
+            <path id="路径-7" d="M256.730676,505.056392 L349.189,553.134 L351.034745,549.586026 L356.943608,557.730676 L346.88257,557.570977 L348.727,554.022 L256.269324,505.943608 L256.730676,505.056392 Z" fill="#68798E" fill-rule="nonzero" filter="url(#filter-10)"></path>
+            <path id="路径-8" d="M164.568619,289.534338 L164.552,293.534 L403.855431,294.500004 L403.851395,295.499996 L164.548,294.534 L164.5323,298.534265 L155.550533,293.997982 L164.568619,289.534338 Z" fill="#54639C" fill-rule="nonzero" filter="url(#filter-12)"></path>
+            <path id="路径-9" d="M301.265477,180.226304 L310.619844,183.933839 L307.638,186.6 L403.773817,294.067682 L403.028509,294.734402 L306.893,187.267 L303.912069,189.934319 L301.265477,180.226304 Z" fill="#54639C" fill-rule="nonzero" filter="url(#filter-14)"></path>
+            <path id="路径-10" d="M505.714546,77.0483698 L505.917381,87.1086312 L502.304,85.391 L403.050396,294.32636 L402.147135,293.897267 L501.4,84.962 L497.788038,83.2467945 L505.714546,77.0483698 Z" fill="#54639C" fill-rule="nonzero" filter="url(#filter-16)"></path>
+            <path id="路径-11" d="M402.989258,290.316518 L403.818082,290.876028 L279.766,474.638 L283.081869,476.876517 L274.316575,481.818139 L275.622454,471.840931 L278.937,474.078 L402.989258,290.316518 Z" fill="#54639C" fill-rule="nonzero" filter="url(#filter-18)"></path>
+            <path id="路径-12" d="M415.275438,306.053265 L423.338165,312.073434 L419.764,313.87 L509.946735,493.275438 L509.053265,493.724562 L418.871,314.318 L415.296939,316.115548 L415.275438,306.053265 Z" fill="#DA4454" fill-rule="nonzero" filter="url(#filter-20)"></path>
+            <path id="路径-13" d="M614.795395,128.288219 L610.482514,137.379372 L608.016,134.229 L402.906524,294.797281 L402.290105,294.009862 L607.4,133.442 L604.934744,130.292606 L614.795395,128.288219 Z" fill="#54639C" fill-rule="nonzero" filter="url(#filter-22)"></path>
+            <path id="路径-14" d="M152.619207,308.164746 L162.65909,308.836126 L160.635,312.286 L499.106901,510.793414 L498.601005,511.656009 L160.13,313.149 L158.106033,316.59948 L152.619207,308.164746 Z" fill="#DA4454" fill-rule="nonzero" filter="url(#filter-24)"></path>
+            <path id="路径-15" d="M295.734767,188.173933 L304.323637,193.416194 L300.933,195.538 L498.423853,511.136981 L497.576147,511.667447 L300.084,196.068 L296.69428,198.190386 L295.734767,188.173933 Z" fill="#DA4454" fill-rule="nonzero" filter="url(#filter-26)"></path>
+            <path id="路径-4" d="M653.303596,110.602723 L761.049,192.941 L763.478651,189.763367 L767.897277,198.803596 L758.013918,196.91436 L760.442,193.736 L652.696404,111.397277 L653.303596,110.602723 Z" fill="#2A908F" fill-rule="nonzero" filter="url(#filter-28)"></path>
+            <path id="路径-17" d="M636.576634,141.53062 L637.699903,151.530033 L633.944,150.151 L501.065032,512.172286 L500.126272,511.827714 L633.005,149.807 L629.251064,148.428883 L636.576634,141.53062 Z" fill="#DA4454" fill-rule="nonzero" filter="url(#filter-30)"></path>
+            <path id="路径-16" d="M775.722149,231.05206 L775.754925,241.114313 L772.171,239.337 L714.94794,354.722149 L714.05206,354.277851 L771.274,238.892 L767.692013,237.115633 L775.722149,231.05206 Z" fill="#7250A0" fill-rule="nonzero" filter="url(#filter-32)"></path>
+            <path id="路径-18" d="M691.193946,372.104613 L691.806054,372.895387 L543.625,487.597 L546.073034,490.760318 L536.201583,492.710816 L540.564055,483.643356 L543.012,486.806 L691.193946,372.104613 Z" fill="#7250A0" fill-rule="nonzero" filter="url(#filter-34)"></path>
+            <path id="路径-19" d="M636.902652,112.126069 L637.237405,113.068375 L164.443,281.028 L165.782048,284.797744 L155.794905,283.570155 L162.769263,276.316994 L164.108,280.085 L636.902652,112.126069 Z" fill="#2A908F" fill-rule="nonzero" filter="url(#filter-36)"></path>
+            <path id="路径-21" d="M534.583801,64.1932996 L533.014,67.873 L636.60031,112.025436 L636.2082,112.945354 L532.622,68.793 L531.054813,72.4725657 L524.540041,64.8039451 L534.583801,64.1932996 Z" fill="#2A908F" fill-rule="nonzero" filter="url(#filter-38)"></path>
+            <path id="路径-22" d="M641.637112,112.253214 L642.362888,112.941144 L288.209,486.577 L291.113402,489.329402 L281.656035,492.76571 L284.581409,483.138032 L287.484,485.889 L641.637112,112.253214 Z" fill="#2A908F" fill-rule="nonzero" filter="url(#filter-40)"></path>
+            <path id="路径-23" d="M640.968787,112.348604 L641.836091,112.846382 L394.164,544.376 L397.633984,546.367915 L389.251111,551.933652 L389.828245,541.887911 L393.297,543.878 L640.968787,112.348604 Z" fill="#2A908F" fill-rule="nonzero" filter="url(#filter-42)"></path>
+            <path id="路径-24" d="M41.2450378,197.245212 L50.7909824,200.427184 L47.962,203.255 L133.853553,289.146446 L133.146447,289.853554 L47.255,203.963 L44.4270274,206.791151 L41.2450378,197.245212 Z" fill="#E8D12C" fill-rule="nonzero" filter="url(#filter-44)"></path>
+            <text id="出现" filter="url(#filter-46)" transform="translate(76.343479, 214.911553) rotate(46.000000) translate(-76.343479, -214.911553) " font-family="PingFangSC-Medium, PingFang SC" font-size="12" font-weight="400" fill="#555555">
+                <tspan x="64.3434785" y="219.411553">出现</tspan>
+            </text>
+            <text id="利用" filter="url(#filter-48)" transform="translate(194.226413, 377.659158) rotate(58.000000) translate(-194.226413, -377.659158) " font-family="PingFangSC-Medium, PingFang SC" font-size="12" font-weight="400" fill="#555555">
+                <tspan x="182.226413" y="382.159158">利用</tspan>
+            </text>
+            <text id="出现" filter="url(#filter-50)" transform="translate(297.577726, 546.432399) rotate(27.000000) translate(-297.577726, -546.432399) " font-family="PingFangSC-Medium, PingFang SC" font-size="12" font-weight="400" fill="#555555">
+                <tspan x="285.577726" y="550.932399">出现</tspan>
+            </text>
+            <text id="关联" filter="url(#filter-52)" transform="translate(377.263563, 340.179160) rotate(57.000000) translate(-377.263563, -340.179160) " font-family="PingFangSC-Medium, PingFang SC" font-size="12" font-weight="400" fill="#555555">
+                <tspan x="365.263563" y="344.67916">关联</tspan>
+            </text>
+            <text id="无关" filter="url(#filter-54)" transform="translate(457.894816, 363.389465) rotate(62.000000) translate(-457.894816, -363.389465) " font-family="PingFangSC-Medium, PingFang SC" font-size="12" font-weight="400" fill="#555555">
+                <tspan x="445.894816" y="367.889465">无关</tspan>
+            </text>
+            <text id="无关" filter="url(#filter-56)" transform="translate(719.869529, 121.897376) rotate(20.000000) translate(-719.869529, -121.897376) " font-family="PingFangSC-Medium, PingFang SC" font-size="12" font-weight="400" fill="#555555">
+                <tspan x="707.869529" y="126.397376">无关</tspan>
+            </text>
+            <text id="运用" filter="url(#filter-58)" transform="translate(579.031481, 72.400218) rotate(23.000000) translate(-579.031481, -72.400218) " font-family="PingFangSC-Medium, PingFang SC" font-size="12" font-weight="400" fill="#555555">
+                <tspan x="567.031481" y="76.9002177">运用</tspan>
+            </text>
+            <text id="无关" filter="url(#filter-60)" transform="translate(293.186304, 374.491554) rotate(31.000000) translate(-293.186304, -374.491554) " font-family="PingFangSC-Medium, PingFang SC" font-size="12" font-weight="400" fill="#555555">
+                <tspan x="281.186304" y="378.991554">无关</tspan>
+            </text>
+            <text id="利用" filter="url(#filter-62)" font-family="PingFangSC-Medium, PingFang SC" font-size="12" font-weight="400" fill="#555555">
+                <tspan x="230" y="285">利用</tspan>
+            </text>
+            <text id="被检测" filter="url(#filter-64)" transform="translate(382.277448, 190.239633) rotate(-19.000000) translate(-382.277448, -190.239633) " font-family="PingFangSC-Medium, PingFang SC" font-size="12" font-weight="400" fill="#555555">
+                <tspan x="364.277448" y="194.739633">被检测</tspan>
+            </text>
+            <text id="提供" filter="url(#filter-66)" transform="translate(581.306164, 333.497244) rotate(-70.000000) translate(-581.306164, -333.497244) " font-family="PingFangSC-Medium, PingFang SC" font-size="12" font-weight="400" fill="#555555">
+                <tspan x="569.306164" y="337.997244">提供</tspan>
+            </text>
+            <text id="发现" filter="url(#filter-68)" transform="translate(732.409275, 285.485637) rotate(-66.000000) translate(-732.409275, -285.485637) " font-family="PingFangSC-Medium, PingFang SC" font-size="12" font-weight="400" fill="#555555">
+                <tspan x="720.409275" y="289.985637">发现</tspan>
+            </text>
+            <text id="原料" filter="url(#filter-70)" transform="translate(438.586564, 311.039307) rotate(-46.000000) translate(-438.586564, -311.039307) " font-family="PingFangSC-Medium, PingFang SC" font-size="12" font-weight="400" fill="#555555">
+                <tspan x="426.586564" y="315.539307">原料</tspan>
+            </text>
+            <text id="潜在失效" filter="url(#filter-72)" transform="translate(507.784090, 201.473849) rotate(-38.000000) translate(-507.784090, -201.473849) " font-family="PingFangSC-Medium, PingFang SC" font-size="12" font-weight="400" fill="#555555">
+                <tspan x="483.78409" y="205.973849">潜在失效</tspan>
+            </text>
+            <text id="产生于" filter="url(#filter-74)" transform="translate(463.797210, 184.869898) rotate(-67.000000) translate(-463.797210, -184.869898) " font-family="PingFangSC-Medium, PingFang SC" font-size="12" font-weight="400" fill="#555555">
+                <tspan x="445.79721" y="189.369898">产生于</tspan>
+            </text>
+            <text id="关联" filter="url(#filter-76)" transform="translate(329.817229, 370.954816) rotate(-56.000000) translate(-329.817229, -370.954816) " font-family="PingFangSC-Medium, PingFang SC" font-size="12" font-weight="400" fill="#555555">
+                <tspan x="317.817229" y="375.454816">关联</tspan>
+            </text>
+            <text id="发生位置" filter="url(#filter-78)" transform="translate(368.779334, 99.076758) rotate(-27.000000) translate(-368.779334, -99.076758) " font-family="PingFangSC-Medium, PingFang SC" font-size="12" font-weight="400" fill="#555555">
+                <tspan x="344.779334" y="103.576758">发生位置</tspan>
+            </text>
+            <text id="运用" filter="url(#filter-80)" transform="translate(180.970968, 231.258702) rotate(-40.000000) translate(-180.970968, -231.258702) " font-family="PingFangSC-Medium, PingFang SC" font-size="12" font-weight="400" fill="#555555">
+                <tspan x="168.970968" y="235.758702">运用</tspan>
+            </text>
+            <text id="服务于" filter="url(#filter-82)" transform="translate(581.871369, 416.741079) rotate(-14.000000) translate(-581.871369, -416.741079) " font-family="PingFangSC-Medium, PingFang SC" font-size="12" font-weight="400" fill="#555555">
+                <tspan x="563.871369" y="421.241079">服务于</tspan>
+            </text>
+            <g id="编组-4" transform="translate(104.000000, 242.000000)">
+                <path d="M24,74 C10.8,74 0,63.2 0,50 C0,36.8 10.8,26 24,26 C37.2,26 48,36.8 48,50 C48,63.32 37.32,74 24,74 L24,74 Z" id="路径" stroke="#FFFFFF" stroke-width="3" fill="#E8D12C" fill-rule="nonzero" filter="url(#filter-83)"></path>
+                <text id="探测方法" filter="url(#filter-85)" font-family="PingFangSC-Medium, PingFang SC" font-size="13" font-weight="400" fill="#333333">
+                    <tspan x="7" y="14">探测方法</tspan>
+                </text>
+            </g>
+            <g id="编组-3" transform="translate(258.000000, 114.000000)">
+                <path d="M24,67 C10.8,67 0,56.2 0,43 C0,29.8 10.8,19 24,19 C37.2,19 48,29.8 48,43 C48,56.32 37.32,67 24,67 L24,67 Z" id="路径" stroke="#FFFFFF" stroke-width="3" fill="#557EE8" fill-rule="nonzero" filter="url(#filter-86)"></path>
+                <text id="产线" filter="url(#filter-88)" font-family="PingFangSC-Medium, PingFang SC" font-size="13" font-weight="400" fill="#333333">
+                    <tspan x="11" y="14">产线</tspan>
+                </text>
+            </g>
+            <g id="编组-2" transform="translate(481.000000, 0.000000)">
+                <path d="M25,72 C11.8,72 1,61.2 1,48 C1,34.8 11.8,24 25,24 C38.2,24 49,34.8 49,48 C49,61.32 38.32,72 25,72 L25,72 Z" id="路径" stroke="#FFFFFF" stroke-width="3" fill="#A5A8B4" fill-rule="nonzero" filter="url(#filter-89)"></path>
+                <text id="手机电芯" filter="url(#filter-91)" font-family="PingFangSC-Medium, PingFang SC" font-size="13" font-weight="400" fill="#333333">
+                    <tspan x="0" y="14">手机电芯</tspan>
+                </text>
+            </g>
+            <g id="编组-2" transform="translate(770.000000, 185.000000)">
+                <path d="M24,48 C10.8,48 0,37.2 0,24 C0,10.8 10.8,0 24,0 C37.2,0 48,10.8 48,24 C48,37.32 37.32,48 24,48 L24,48 Z" id="路径" stroke="#FFFFFF" stroke-width="3" fill="#B0C952" fill-rule="nonzero" filter="url(#filter-92)"></path>
+                <text id="日期" filter="url(#filter-94)" font-family="PingFangSC-Medium, PingFang SC" font-size="13" font-weight="400" fill="#333333">
+                    <tspan x="11.5" y="71">日期</tspan>
+                </text>
+            </g>
+            <g id="编组-2" transform="translate(216.000000, 452.000000)">
+                <path d="M0,47 C0,33.8 10.8,23 24,23 C37.2,23 48,33.8 48,47 C48,60.32 37.32,71 24,71 C10.8,71 0,60.2 0,47 Z" id="路径" stroke="#FFFFFF" stroke-width="3" fill="#68798E" fill-rule="nonzero" filter="url(#filter-95)"></path>
+                <text id="产品" filter="url(#filter-97)" font-family="PingFangSC-Medium, PingFang SC" font-size="13" font-weight="400" fill="#333333">
+                    <tspan x="14" y="14">产品</tspan>
+                </text>
+            </g>
+            <g id="编组-2" transform="translate(355.000000, 553.000000)">
+                <path d="M24,48 C10.8,48 0,37.2 0,24 C0,10.8 10.8,0 24,0 C37.2,0 48,10.8 48,24 C48,37.32 37.32,48 24,48 L24,48 Z" id="路径" stroke="#FFFFFF" stroke-width="3" fill="#F39223" fill-rule="nonzero" filter="url(#filter-98)"></path>
+                <text id="设备" filter="url(#filter-100)" font-family="PingFangSC-Medium, PingFang SC" font-size="13" font-weight="400" fill="#333333">
+                    <tspan x="4" y="69">设备</tspan>
+                </text>
+            </g>
+            <g id="编组-2" transform="translate(386.000000, 233.000000)">
+                <path d="M24,72 C10.8,72 0,61.2 0,48 C0,34.8 10.8,24 24,24 C37.2,24 48,34.8 48,48 C48,61.32 37.32,72 24,72 L24,72 Z" id="路径" stroke="#FFFFFF" stroke-width="3" fill="#54639C" fill-rule="nonzero" filter="url(#filter-101)"></path>
+                <text id="FA" filter="url(#filter-103)" font-family="PingFangSC-Medium, PingFang SC" font-size="13" font-weight="400" fill="#333333">
+                    <tspan x="12" y="14">FA</tspan>
+                </text>
+            </g>
+            <g id="编组-2" transform="translate(485.000000, 472.000000)">
+                <path d="M24,48 C10.8,48 0,37.2 0,24 C0,10.8 10.8,0 24,0 C37.2,0 48,10.8 48,24 C48,37.32 37.32,48 24,48 L24,48 Z" id="路径" stroke="#FFFFFF" stroke-width="3" fill="#DA4454" fill-rule="nonzero" filter="url(#filter-104)"></path>
+                <text id="客户" filter="url(#filter-106)" font-family="PingFangSC-Medium, PingFang SC" font-size="13" font-weight="400" fill="#333333">
+                    <tspan x="13" y="69">客户</tspan>
+                </text>
+            </g>
+            <g id="编组-2" transform="translate(679.000000, 328.000000)">
+                <path d="M24,48 C10.8,48 0,37.2 0,24 C0,10.8 10.8,0 24,0 C37.2,0 48,10.8 48,24 C48,37.32 37.32,48 24,48 L24,48 Z" id="路径" stroke="#FFFFFF" stroke-width="3" fill="#7250A0" fill-rule="nonzero" filter="url(#filter-107)"></path>
+                <text id="部门" filter="url(#filter-109)" font-family="PingFangSC-Medium, PingFang SC" font-size="13" font-weight="400" fill="#333333">
+                    <tspan x="16.5" y="72.6875">部门</tspan>
+                </text>
+            </g>
+            <g id="编组-2" transform="translate(609.000000, 50.000000)">
+                <path d="M37,75 C23.8,75 13,64.2 13,51 C13,37.8 23.8,27 37,27 C50.2,27 61,37.8 61,51 C61,64.32 50.32,75 37,75 L37,75 Z" id="路径" stroke="#FFFFFF" stroke-width="3" fill="#2A908F" fill-rule="nonzero" filter="url(#filter-110)"></path>
+                <text id="物料" filter="url(#filter-112)" font-family="PingFangSC-Medium, PingFang SC" font-size="13" font-weight="400" fill="#333333">
+                    <tspan x="26" y="14">物料</tspan>
+                </text>
+            </g>
+            <g id="编组-2" transform="translate(0.000000, 127.000000)">
+                <path d="M24,73 C10.8,73 0,62.2 0,49 C0,35.8 10.8,25 24,25 C37.2,25 48,35.8 48,49 C48,62.32 37.32,73 24,73 L24,73 Z" id="路径" stroke="#FFFFFF" stroke-width="3" fill="#50A06A" fill-rule="nonzero" filter="url(#filter-113)"></path>
+                <text id="黑斑" filter="url(#filter-115)" font-family="PingFangSC-Medium, PingFang SC" font-size="13" font-weight="400" fill="#333333">
+                    <tspan x="11" y="14">黑斑</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
