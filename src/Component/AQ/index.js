@@ -14,6 +14,7 @@ const color = [
   "#BDB76B",
   "#008B8B",
 ];
+
 class AQ extends Component {
   state = {
     leftC: [],
