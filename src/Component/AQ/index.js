@@ -2,7 +2,10 @@ import React, { Component } from "react";
 import { Input, Button } from "antd";
 import jiqiren from "../../Asset/Image/jiqiren.svg";
 import rentou from "../../Asset/Image/rentou.svg";
+import st from "../../Asset/Image/4-4.svg";
 import t1 from "../../Asset/Image/t1.jpg";
+import word from "../../Asset/Image/word.svg";
+import xls from "../../Asset/Image/xls.svg";
 import "./style.less";
 
 const { TextArea } = Input;
@@ -21,6 +24,8 @@ class AQ extends Component {
     inputValue: "",
     rightC: "",
     rightL: [],
+    ts: false,
+    doc: [],
   };
 
   sendMessage = () => {
@@ -48,6 +53,10 @@ class AQ extends Component {
   QAR = (inputValue) => {
     const { leftC } = this.state;
 
+    this.setState({
+      ts: false,
+    });
+
     if (inputValue.includes("D130H70压缩机的转速是多少")) {
       this.setState(
         {
@@ -66,6 +75,7 @@ class AQ extends Component {
             "设备类型=压缩机",
             "压缩机类型-属性=转速",
           ],
+          doc: ["D130H70 说明书.doc"],
         },
         () => {
           if (document.getElementById("srollB")) {
@@ -97,6 +107,7 @@ class AQ extends Component {
             "属性：转速",
             "属性值：600r/min，氢气",
           ],
+          doc: ["ZW-0.84 说明书.doc"],
         },
         () => {
           if (document.getElementById("srollB")) {
@@ -132,6 +143,7 @@ class AQ extends Component {
             "压缩机类型=无油润滑煤气",
             "属性：注意事项",
           ],
+          doc: ["无油润滑煤气压缩机设备使用手册.doc"],
         },
         () => {
           if (document.getElementById("srollB")) {
@@ -157,6 +169,7 @@ class AQ extends Component {
           ],
           rightC: "A0001/的/压缩机/的/电机/的/转速/多/大",
           rightL: ["设备=压缩机", "设备编号=A0001"],
+          doc: ["LW-44 说明书.doc"],
         },
         () => {
           if (document.getElementById("srollB")) {
@@ -186,6 +199,7 @@ class AQ extends Component {
             "设备类型=压缩机",
             "设备型号= LW-44",
           ],
+          doc: ["设备故障信息表.xlsx"],
         },
         () => {
           if (document.getElementById("srollB")) {
@@ -211,6 +225,7 @@ class AQ extends Component {
           ],
           rightC: "哪一/台/压缩机/的/进气量/比较/大",
           rightL: ["设备类型= 压缩机", "属性=进气量"],
+          doc: ["LW-44 说明书.doc", "ZW-0.84 说明书.doc", "D130H70 说明书.doc"],
         },
         () => {
           if (document.getElementById("srollB")) {
@@ -255,6 +270,7 @@ class AQ extends Component {
           ],
           rightC: "D130H70/与/LW-44/压缩机/分别/用/了/什么/电动机/转速/是/多少",
           rightL: ["设备类型= 压缩机", "设备型号=D130H70， LW-44"],
+          doc: ["D130H70 说明书.doc", "LW-44 说明书.doc"],
         },
         () => {
           if (document.getElementById("srollB")) {
@@ -280,6 +296,8 @@ class AQ extends Component {
           ],
           rightC: "张三/管理/着/哪些/型号/的/设备",
           rightL: ["责任人：张三", "属性：型号"],
+          ts: true,
+          doc: ["设备运维信息表.xlsx"],
         },
         () => {
           if (document.getElementById("srollB")) {
@@ -312,6 +330,7 @@ class AQ extends Component {
             "设备编号=None",
             "属性=生产厂商",
           ],
+          doc: [],
         },
         () => {
           if (document.getElementById("srollB")) {
@@ -337,6 +356,7 @@ class AQ extends Component {
           ],
           rightC: "我们/这个/压缩机/的/生产/厂商/是/哪个",
           rightL: ["设备类型=压缩机", "设备型号= D130H70", "属性=生产厂商"],
+          doc: ["设备信息表.xlsx"],
         },
         () => {
           if (document.getElementById("srollB")) {
@@ -364,6 +384,7 @@ class AQ extends Component {
           ],
           rightC: "张三/管理/的/设备/各/型号/的/数量",
           rightL: ["责任人：张三", "属性：型号"],
+          doc: ["设备运维信息表.xlsx"],
         },
         () => {
           if (document.getElementById("srollB")) {
@@ -386,6 +407,7 @@ class AQ extends Component {
             <div className="c-c">无内容</div>
           </div>,
         ],
+        doc: [],
       },
       () => {
         if (document.getElementById("srollB")) {
@@ -396,7 +418,7 @@ class AQ extends Component {
   };
 
   render() {
-    const { inputValue, leftC, rightC, rightL } = this.state;
+    const { inputValue, leftC, rightC, rightL, ts, doc } = this.state;
 
     return (
       <div className="aq">
@@ -481,6 +503,35 @@ class AQ extends Component {
               </div>
             );
           })}
+
+          <div className="title t-m">关联文档</div>
+
+          {doc.map((item, index) => {
+            return (
+              <div className="l-m" key={index.toString()}>
+                <div className="l-t-t">
+                  {item.includes("doc") ? (
+                    <img src={word} alt="" className="t" />
+                  ) : (
+                    <img src={xls} alt="" className="t" />
+                  )}
+                </div>
+                <div className="content" key={index.toString()}>
+                  {item}
+                </div>
+              </div>
+            );
+          })}
+
+          {ts ? (
+            <>
+              <div className="title t-m">图谱</div>
+
+              <div className="tu">
+                <img src={st} alt="" className="icon" />
+              </div>
+            </>
+          ) : null}
         </div>
       </div>
     );

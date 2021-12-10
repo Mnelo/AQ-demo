@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="458px" height="373px" viewBox="0 0 458 373" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组 20</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="智能机器人有图" transform="translate(-1280.000000, -502.000000)">
+            <g id="编组-13" transform="translate(1212.000000, 466.000000)">
+                <g id="编组-20" transform="translate(68.000000, 36.000000)">
+                    <g id="编组-7" transform="translate(43.000000, 258.000000)">
+                        <path d="M36,36 C26.1,36 18,27.9 18,18 C18,8.1 26.1,0 36,0 C45.9,0 54,8.1 54,18 C54,27.99 45.99,36 36,36 L36,36 Z" id="路径" stroke="#FFFFFF" stroke-width="3" fill="#929E16" fill-rule="nonzero"></path>
+                        <text id="A0004设备" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+                            <tspan x="0" y="58">A0004设备</tspan>
+                        </text>
+                    </g>
+                    <g id="编组-7" transform="translate(154.000000, 310.000000)">
+                        <path d="M58,36 C48.1,36 40,27.9 40,18 C40,8.1 48.1,0 58,0 C67.9,0 76,8.1 76,18 C76,27.99 67.99,36 58,36 L58,36 Z" id="路径" stroke="#FFFFFF" stroke-width="3" fill="#A9B624" fill-rule="nonzero"></path>
+                        <text id="D130H70设备型号" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+                            <tspan x="0" y="58">D130H70设备型号</tspan>
+                        </text>
+                    </g>
+                    <g id="编组-7" transform="translate(329.000000, 275.000000)">
+                        <path d="M55,36 C45.1,36 37,27.9 37,18 C37,8.1 45.1,0 55,0 C64.9,0 73,8.1 73,18 C73,27.99 64.99,36 55,36 L55,36 Z" id="路径" stroke="#FFFFFF" stroke-width="3" fill="#CCD756" fill-rule="nonzero"></path>
+                        <text id="D130H70压缩机类型" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+                            <tspan x="0" y="58">D130H70压缩机类型</tspan>
+                        </text>
+                    </g>
+                    <path id="路径-12" d="M200.232374,204.077653 L200.767626,204.922347 L106.947,264.372 L109.08852,267.751485 L99.0776535,268.767626 L104.271261,260.149248 L106.412,263.528 L200.232374,204.077653 Z" fill="#DA4454" fill-rule="nonzero"></path>
+                    <g id="编组-7" transform="translate(0.000000, 42.000000)">
+                        <path d="M59,63 C49.1,63 41,54.9 41,45 C41,35.1 49.1,27 59,27 C68.9,27 77,35.1 77,45 C77,54.99 68.99,63 59,63 L59,63 Z" id="路径" stroke="#FFFFFF" stroke-width="3" fill="#6A80F0" fill-rule="nonzero"></path>
+                        <text id="LW-44压缩机类型" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+                            <tspan x="0" y="15">LW-44压缩机类型</tspan>
+                        </text>
+                    </g>
+                    <g id="编组-7" transform="translate(145.000000, 0.000000)">
+                        <path d="M52,66 C42.1,66 34,57.9 34,48 C34,38.1 42.1,30 52,30 C61.9,30 70,38.1 70,48 C70,57.99 61.99,66 52,66 L52,66 Z" id="路径" stroke="#FFFFFF" stroke-width="3" fill="#3855E6" fill-rule="nonzero"></path>
+                        <text id="LW-44设备型号" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+                            <tspan x="0" y="15">LW-44设备型号</tspan>
+                        </text>
+                    </g>
+                    <g id="编组-7" transform="translate(310.000000, 24.000000)">
+                        <path d="M29,63 C19.1,63 11,54.9 11,45 C11,35.1 19.1,27 29,27 C38.9,27 47,35.1 47,45 C47,54.99 38.99,63 29,63 L29,63 Z" id="路径" stroke="#FFFFFF" stroke-width="3" fill="#3E52B5" fill-rule="nonzero"></path>
+                        <text id="A0001设备" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+                            <tspan x="0" y="15">A0001设备</tspan>
+                        </text>
+                    </g>
+                    <path id="路径-12" d="M326.847898,85.1408799 L323.817822,94.7361204 L320.944,91.952 L233.85912,181.847898 L233.14088,181.152102 L320.226,91.257 L317.35366,88.4739634 L326.847898,85.1408799 Z" fill="#DA4454" fill-rule="nonzero"></path>
+                    <g id="编组-7" transform="translate(179.000000, 147.000000)">
+                        <path d="M42,63 C32.1,63 24,54.9 24,45 C24,35.1 32.1,27 42,27 C51.9,27 60,35.1 60,45 C60,54.99 51.99,63 42,63 L42,63 Z" id="路径" stroke="#FFFFFF" stroke-width="3" fill="#FF8600" fill-rule="nonzero"></path>
+                        <text id="负责人：张三" font-family="PingFangSC-Regular, PingFang SC" font-size="14" font-weight="normal" fill="#333333">
+                            <tspan x="0" y="15">负责人：张三</tspan>
+                        </text>
+                    </g>
+                    <path id="路径-12" d="M98.6771787,285.032445 L185.728,318.02 L187.146173,314.279966 L193.967555,321.677179 L183.956956,322.695957 L185.374,318.955 L98.3228213,285.967555 L98.6771787,285.032445 Z" fill="#929E16" fill-rule="nonzero"></path>
+                    <path id="路径-12" d="M355.085001,290.535873 L364.980357,292.36123 L357.582858,299.182301 L356.472,295.339 L229.63877,331.980357 L229.36123,331.019643 L356.195,294.378 L355.085001,290.535873 Z" fill="#A9B624" fill-rule="nonzero"></path>
+                    <path id="路径-12" d="M230.614023,47.4284232 L229.969,51.376 L319.580566,66.0065336 L319.419434,66.9934664 L229.808,52.363 L229.163836,56.3108191 L221.006534,50.4194341 L230.614023,47.4284232 Z" fill="#3E52B5" fill-rule="nonzero"></path>
+                    <path id="路径-12" d="M174.364021,53.0188453 L174.635979,53.9811547 L90.815,77.669 L91.9034364,81.5187578 L82.0188453,79.6359785 L89.4558234,72.8579731 L90.543,76.706 L174.364021,53.0188453 Z" fill="#3855E6" fill-rule="nonzero"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
