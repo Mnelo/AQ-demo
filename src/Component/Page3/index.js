@@ -1,9 +1,11 @@
 import React, { Component } from "react";
-import { Button, Input } from "antd";
+import { Button, Input, Select } from "antd";
+import store from "storejs";
 import EditD from "../../Asset/Image/EditD.svg";
 import "./style.less";
 
 const { TextArea } = Input;
+const { Option } = Select;
 
 class Page3 extends Component {
   render() {
@@ -14,7 +16,7 @@ class Page3 extends Component {
           <TextArea
             className="input-t"
             defaultValue={
-              "12月13号，1号产线在多轮循环测试的时候，测试出一批有黑斑的手机电芯。初步查验，黑斑的主要成分是石墨，锂离子未嵌满"
+              "12月20日，发现一批手机电芯产生的气体增加，经进行水含量测试，发现其主要原因是电解液水分超标导致电解液氢氟酸含量超高"
             }
           />
         </div>
@@ -29,8 +31,8 @@ class Page3 extends Component {
 
         <div className="b-1">
           <div className="i-s">
-            <div className="i-f">失效现象</div>
-            <Input className="input-f" defaultValue={"黑斑"} />
+            <div className="i-f">失效机理</div>
+            <Input className="input-f" defaultValue={"水含量超标"} />
             <div className="icon">
               <img className="icon-i" src={EditD} alt="" />
             </div>
@@ -45,32 +47,24 @@ class Page3 extends Component {
           </div>
 
           <div className="i-s">
-            <div className="i-f">探测方法</div>
-            <Input className="input-f" defaultValue={"多功能循环测试"} />
+            <div className="i-f">伴随现象</div>
+            <Input className="input-f" defaultValue={"产气"} />
             <div className="icon">
               <img className="icon-i" src={EditD} alt="" />
             </div>
           </div>
 
           <div className="i-s i-s-r">
-            <div className="i-f">物料</div>
-            <Input className="input-f" defaultValue={"石墨、锂"} />
+            <div className="i-f">料</div>
+            <Input className="input-f" defaultValue={"电解液HF高"} />
             <div className="icon">
               <img className="icon-i" src={EditD} alt="" />
             </div>
           </div>
 
           <div className="i-s">
-            <div className="i-f">产线</div>
-            <Input className="input-f" defaultValue={"1号"} />
-            <div className="icon">
-              <img className="icon-i" src={EditD} alt="" />
-            </div>
-          </div>
-
-          <div className="i-s i-s-r">
-            <div className="i-f">日期</div>
-            <Input className="input-f" defaultValue={"12月13日"} />
+            <div className="i-f">探测方法</div>
+            <Input className="input-f" defaultValue={"水含量测试"} />
             <div className="icon">
               <img className="icon-i" src={EditD} alt="" />
             </div>
@@ -81,14 +75,20 @@ class Page3 extends Component {
 
         <div className="b-1">
           <div className="i-s">
-            <div className="i-f">失效模式</div>
-            <Input className="input-f" />
-            <div className="icon">
-              <img className="icon-i" src={EditD} alt="" />
-            </div>
+            <div className="i-f">编码</div>
+            <Select
+              className="select-f"
+              onChange={(value) => {
+                store.set("selectV", value);
+              }}
+            >
+              <Option value={"LI-001"}>LI-001</Option>
+              <Option value={"LI-002"}>LI-002</Option>
+              <Option value={"LI-003"}>LI-003</Option>
+            </Select>
           </div>
 
-          <div className="i-s i-s-r">
+          {/* <div className="i-s i-s-r">
             <div className="i-f">产品</div>
             <Input className="input-f" />
             <div className="icon">
@@ -126,18 +126,18 @@ class Page3 extends Component {
             <div className="icon">
               <img className="icon-i" src={EditD} alt="" />
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="b-b">
-          <Button
+          {/* <Button
             className="b-l"
             onClick={() => {
               this.props.setContent(2);
             }}
           >
             上一步
-          </Button>
+          </Button> */}
           <Button
             type="primary"
             className="b-3"

@@ -20,6 +20,10 @@ class SideBar extends Component {
     }
 
     if (e.key === "2") {
+      this.props.setContent(3);
+    }
+
+    if (e.key === "3") {
       this.props.setContent(1);
     }
 
@@ -57,7 +61,7 @@ class SideBar extends Component {
                             </Link> */}
               </Item>
               <Item key="3" icon={<MailOutlined />}>
-                失效图谱
+                FA编辑器
               </Item>
               <Item key="4" icon={<SettingOutlined />}>
                 数据管理

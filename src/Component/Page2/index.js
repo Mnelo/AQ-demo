@@ -2,13 +2,11 @@ import React, { Component } from "react";
 import { Button, Input } from "antd";
 import "./style.less";
 
-const { TextArea } = Input;
-
 class Page2 extends Component {
   render() {
     return (
       <div className="page2">
-        <div className="title">新建FQ</div>
+        <div className="title">新建FA</div>
 
         <div className="name">
           <label className="label-f">名称</label>
@@ -27,11 +25,11 @@ class Page2 extends Component {
         </div>
 
         <div className="name">
-          <label className="label-f">问题描述</label>
+          <label className="label-f">创建人</label>
         </div>
 
         <div className="input">
-          <TextArea className="input-t" placeholder={"请输入具体问题"} />
+          <Input className="input-f" placeholder={"请输入"} />
         </div>
 
         <div className="bottom">
@@ -47,10 +45,10 @@ class Page2 extends Component {
             type="primary"
             className="b-2"
             onClick={() => {
-              this.props.setContent(3);
+              this.props.setContent(7);
             }}
           >
-            自动分析
+            下一步
           </Button>
         </div>
       </div>
