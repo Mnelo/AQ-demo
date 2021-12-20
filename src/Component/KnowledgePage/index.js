@@ -227,7 +227,8 @@ class KnowledgePage extends Component {
               className="btn"
               onClick={() => {
                 setTimeout(() => {
-                  this.search();
+                  this.props.setContent(3);
+                  // this.search();
                 }, 500);
               }}
             >

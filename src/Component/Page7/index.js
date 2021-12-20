@@ -79,15 +79,28 @@ class Page7 extends Component {
             <div className="title">失效机理</div>
             <div className="m-t">失效机理假设</div>
             <div className="t-w">
-              <TextArea className="t-a" />
+              <TextArea
+                className="t-a"
+                placeholder="通过原因分析排查，输出关键的失效假设机理可结合力学、机械、热学等模拟仿真加以佐证失效机理提出失效机理假设时，推导过程严谨、完整、符合基本原理"
+              />
             </div>
             <div lassName="m-t">失效机理验证</div>
             <div className="t-w">
-              <TextArea className="t-a" />
+              <TextArea
+                className="t-a"
+                placeholder={
+                  "设计实验对失效原因进行验证，可根据实际需要选择重现失效或规避失效常用实验设计方法，有单因子实验、多因子实验、模拟验证等设计的实验需排查干扰因素确保可靠性若验证实验无法重现失效或者规避失效的话，需再次排查失效原因，找到关键的失效因子和假设建议优先进行单因子实验"
+                }
+              />
             </div>
             <div lassName="m-t">改善方案</div>
             <div className="t-w">
-              <TextArea className="t-a" />
+              <TextArea
+                className="t-a"
+                placeholder={
+                  "设计实验对失效原因进行验证，可根据实际需要选择重现失效或规避失效常用实验设计方法，有单因子实验、多因子实验、模拟验证等设计的实验需排查干扰因素确保可靠性若验证实验无法重现失效或者规避失效的话，需再次排查失效原因，找到关键的失效因子和假设建议优先进行单因子实验"
+                }
+              />
             </div>
           </div>
 

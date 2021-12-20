@@ -56,6 +56,8 @@ class Page1 extends Component {
               <div className="l-4">时间</div>
               <div className="l-5">负责人</div>
               <div className="l-6">所属产线</div>
+              <div className="l-7">操作</div>
+              <div></div>
             </div>
 
             <div className="head content-width">
@@ -76,6 +78,14 @@ class Page1 extends Component {
                 <div>手机装配线经理</div>
               </div>
               <div className="l-6 l-c">SJ-0-167523</div>
+              <div
+                className="l-7 l-7-c"
+                onClick={() => {
+                  this.props.setContent(9);
+                }}
+              >
+                查看
+              </div>
             </div>
 
             <div className="head content-width">
@@ -96,6 +106,14 @@ class Page1 extends Component {
                 <div>性能测试部经理</div>
               </div>
               <div className="l-6 l-c">XT-5-1008</div>
+              <div
+                className="l-7 l-7-c"
+                onClick={() => {
+                  this.props.setContent(9);
+                }}
+              >
+                查看
+              </div>
             </div>
 
             <div className="head content-width">
@@ -116,6 +134,14 @@ class Page1 extends Component {
                 <div>零部件设计经理</div>
               </div>
               <div className="l-6 l-c">bSJ-0-16023</div>
+              <div
+                className="l-7 l-7-c"
+                onClick={() => {
+                  this.props.setContent(9);
+                }}
+              >
+                查看
+              </div>
             </div>
 
             <div className="head content-width">
@@ -136,6 +162,14 @@ class Page1 extends Component {
                 <div>工厂负责人</div>
               </div>
               <div className="l-6 l-c">GC-0-167523</div>
+              <div
+                className="l-7 l-7-c"
+                onClick={() => {
+                  this.props.setContent(9);
+                }}
+              >
+                查看
+              </div>
             </div>
           </div>
         </div>

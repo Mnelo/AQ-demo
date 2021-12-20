@@ -26,34 +26,64 @@ class Page6 extends Component {
             <div className="s-s-1">
               <div className="i-s">
                 <div className="i-f">What</div>
-                <Input className="input-f" defaultValue={""} />
+                <Input
+                  className="input-f"
+                  defaultValue={""}
+                  placeholder="在什么条件产生什么问题"
+                />
               </div>
               <div className="i-s">
                 <div className="i-f">When</div>
-                <Input className="input-f" defaultValue={""} />
+                <Input
+                  className="input-f"
+                  defaultValue={""}
+                  placeholder="什么时候发生的"
+                />
               </div>
               <div className="i-s">
                 <div className="i-f">Where</div>
-                <Input className="input-f" defaultValue={""} />
+                <Input
+                  className="input-f"
+                  defaultValue={""}
+                  placeholder="在哪儿在什么环境下发生的"
+                />
               </div>
               <div className="i-s">
                 <div className="i-f">Who</div>
-                <Input className="input-f" defaultValue={""} />
+                <Input
+                  className="input-f"
+                  defaultValue={""}
+                  placeholder="当事人或者主导方是谁"
+                />
               </div>
               <div className="i-s">
                 <div className="i-f">Why</div>
-                <Input className="input-f" defaultValue={""} />
+                <Input
+                  className="input-f"
+                  defaultValue={""}
+                  placeholder="客户或内部为何提出问题"
+                />
               </div>
               <div className="i-s">
                 <div className="i-f">How</div>
-                <Input className="input-f" defaultValue={""} />
+                <Input
+                  className="input-f"
+                  defaultValue={""}
+                  placeholder="问题是怎样发生的"
+                />
               </div>
               <div className="i-s">
                 <div className="i-f">How much</div>
-                <Input className="input-f" defaultValue={""} />
+                <Input
+                  className="input-f"
+                  defaultValue={""}
+                  placeholder="发生问题的量化比例"
+                />
               </div>
             </div>
           </div>
+
+          <div className="load-i">上传图片</div>
 
           <div className="b-2">
             <div className="b-w">风险评估</div>
@@ -118,13 +148,22 @@ class Page6 extends Component {
             <div className="b-w">止血措施</div>
             <TextArea
               className="input-t"
-              defaultValue={
-                "12月20日，发现一批手机电芯产生的气体增加，经进行水含量测试，发现其主要原因是电解液水分超标导致电解液氢氟酸含量超高"
+              placeholder={
+                "可参考历史案例常用的有效措施，如：sorting、返工、收紧规格、暂停生产或发货、降低充放电倍率或电压窗口、产品召回"
               }
             />
           </div>
 
           <div className="d-b">
+            <Button
+              className="b"
+              onClick={() => {
+                this.props.setContent(2);
+              }}
+            >
+              上一步
+            </Button>
+
             <Button
               type="primary"
               className="b"
