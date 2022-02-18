@@ -1,0 +1,54 @@
+.main-page {
+  min-width: 1820px;
+  display: flex;
+
+  .sider-bar {
+    width: 248px;
+    background: white;
+    height: calc(100vh - 48px);
+    position: fixed;
+
+    .select {
+      width: 100%;
+      margin: 16px 0 0 0;
+
+      .name {
+        width: 100%;
+      }
+    }
+
+    .module-list {
+      margin: 26px 0 0 0;
+
+      .line {
+        width: 248px;
+        height: 40px;
+        padding: 0 24px;
+        font-size: 14px;
+        cursor: pointer;
+        line-height: 40px;
+      }
+
+      .line:hover {
+        background: rgba(18, 110, 227, 0.06);
+        color: rgba(18, 110, 227, 1);
+      }
+
+      .line-select {
+        font-weight: 500;
+        background: rgba(18, 110, 227, 0.06);
+        color: rgba(18, 110, 227, 1);
+      }
+    }
+  }
+
+  .empty-box {
+    width: 248px !important;
+  }
+
+  .content {
+    max-width: 2000px;
+    width: calc(100% - 248px);
+    margin: 0 auto;
+  }
+}

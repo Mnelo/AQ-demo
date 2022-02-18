@@ -1,6 +1,8 @@
 import React from "react";
-import Head from "./Component/Head";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Head from "./NewComponent/Head";
 import Knowledge from "./NewComponent/Knowledge";
+import MainPage from "./NewComponent/MainPage";
 import "./App.less";
 import "antd/dist/antd.css";
 import "antd/dist/antd.min.css";
@@ -13,7 +15,12 @@ const App = () => {
       </div>
 
       <div className="main-content">
-        <Knowledge />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Knowledge />} />
+            <Route path="/main-page" element={<MainPage />} />
+          </Routes>
+        </BrowserRouter>
       </div>
     </div>
   );

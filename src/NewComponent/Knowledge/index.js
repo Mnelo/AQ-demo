@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./style.less";
 
 const Knowledge = () => {
+  const navigate = useNavigate();
+
   const [list, setList] = useState([]);
 
   useEffect(() => {
@@ -13,6 +16,10 @@ const Knowledge = () => {
     const { data } = await axios.get("http://localhost:8081/knowledge");
 
     setList(data.res);
+  };
+
+  const clickCard = (item) => {
+    navigate(`./main-page?name=${item.name}`);
   };
 
   return (
@@ -26,7 +33,13 @@ const Knowledge = () => {
         <div className="card-table">
           {list.map((item, index) => {
             return (
-              <div className="card" key={index.toString()}>
+              <div
+                className="card"
+                key={index.toString()}
+                onClick={() => {
+                  clickCard(item);
+                }}
+              >
                 <div className="top">
                   <div className="pic"></div>
 
