@@ -1,0 +1,23 @@
+{
+    "res": [
+        {
+            "question": "D130H70压缩机的转速是多少？",
+            "answer": "D130H70压缩机的转速是 400r/min。",
+            "participle": "D130H70 | 压缩机 | 的 | 转速 | 是多少",
+            "semantics": [
+                {
+                    "result": "D130H70=压缩机",
+                    "type": "实体",
+                    "number": 100
+                },
+                {
+                    "result": "转速",
+                    "type": "属性",
+                    "number": 88
+                }
+            ],
+            "model": "实体属性查询",
+            "document": "D130H70压缩机操作手册.word"
+        }
+    ]
+}
