@@ -5,7 +5,7 @@ import './index.less'
 
 const { Option } = Select;
 export default class Factor extends Component {
-
+ ref = React.createRef();
     state = {
         data: [
             {
@@ -136,6 +136,31 @@ export default class Factor extends Component {
         },
       ];
 
+    /**
+     * 创建
+     * @returns 
+    */
+    onFinish = (values) =>{
+        console.log(values);
+        const { data } = this.state;
+        const score = parseInt(Math.random()*100)
+        const obj = [{
+            name: '因子'+ score,
+            type: "图匹配",
+            status: "未匹配",
+            score: score
+        }]
+        const newData = obj.concat(data)
+        console.log(newData);
+        this.setState({
+            addModalVisible: false,
+            data: newData
+        },
+        this.ref.current.resetFields()
+        )
+    }
+
+
     render() {
         const { data, addModalVisible,checkModalVisible  } = this.state;
         const { questionInfo } = this.props;
@@ -152,7 +177,7 @@ export default class Factor extends Component {
                 <Table
                  columns={this.columns}
                  dataSource={data}
-                 rowKey={record => record.id}
+                 rowKey={record => record.name}
                  pagination={{ pageSize: 5 }}
                  />
                 </div>
@@ -192,29 +217,34 @@ export default class Factor extends Component {
                 >
                     <Form
                     name="basic"
+                    ref={this.ref}
                     layout="vertical"
-                    initialValues={{ remember: true }}
                     onFinish={this.onFinish}
-                    autoComplete="off"
+                    initialValues={{
+                        position: '逻辑因子1'
+                    }}
                     >
                     <Form.Item
                         label="语义片段"
                         name="question"
                         rules={[{ required: true, message: '输入不能为空' }]}
                     >
-                        <Input className='input' placeholder='请输入问题描述中的语义片段'/>
+                        <Input className='input' autoComplete='off' placeholder='请输入问题描述中的语义片段'/>
                     </Form.Item>
-
-                    <Form.Item
-                        label="选择应匹配的逻辑因子"
-                        name="position"
-                        rules={[{ required: true, message: '输入不能为空' }]}
-                    >
-                        <Select defaultValue="1" style={{ width: 342 }} >
-                            <Option value="1">1</Option>
-                            <Option value="2">2</Option>
-                            <Option value="3">3</Option>
-                        </Select>
+                    <Form.Item>
+                        <Form.Item
+                            label="选择应匹配的逻辑因子"
+                            name="position"
+                            rules={[{ required: true, message: '选择不能为空' }]}
+                            style={{ display: 'inline-block', width: '51%' }}
+                        >
+                            <Select style={{ width: 342 }} >
+                                <Option value="逻辑因子1">逻辑因子1</Option>
+                                <Option value="逻辑因子2">逻辑因子2</Option>
+                                <Option value="逻辑因子3">逻辑因子3</Option>
+                            </Select>
+                        </Form.Item>
+                    
                         <span className='des'>没有匹配的逻辑因子？</span>
                         <span className='create' onClick={this.createFactor}>点击创建新因子</span>
                     </Form.Item>
