@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Input, Button } from "antd";
 import axios from "axios";
+import { getFileEx } from "../../../func/fileExtension";
 import jiqiren from "../../../Asset/Image/jiqiren.svg";
 import rentou from "../../../Asset/Image/rentou.svg";
+import noData from "../../../Asset/Image/zanwuneirong.svg";
 import "./style.less";
 
 const AQ = () => {
@@ -90,6 +92,15 @@ const AQ = () => {
     }
   };
 
+  /**
+   * @description 获取文件后缀图标
+   */
+  const fileEx = (value) => {
+    const word = value.split(".");
+
+    return getFileEx(word[word.length - 1]);
+  };
+
   return (
     <div className="AQ">
       <div className="title">AnyDATA智能机器人</div>
@@ -116,35 +127,58 @@ const AQ = () => {
           </div>
         </div>
         <div className="right">
-          <div className="title">问答分析</div>
+          {JSON.stringify(analysis) === "{}" ? (
+            <div className="no-data">
+              <img src={noData} alt="" />
+              <div className="line-one">暂无内容</div>
+              <div className="line-two">
+                您与小数智能机器人开启对话后，此处将展示对话过程中智能分析的结果
+              </div>
+            </div>
+          ) : (
+            <>
+              <div className="title">问答分析</div>
 
-          <div className="tag">分词</div>
+              <div className="tag">分词</div>
 
-          <div className="word-content">{analysis.participle}</div>
+              <div className="word-content">{analysis.participle}</div>
 
-          <div className="tag">语义理解</div>
+              <div className="tag">语义理解</div>
 
-          <div className="l-a">
-            {analysis.semantics &&
-              analysis.semantics.map((item, index) => {
-                return (
-                  <div className="l-a-line" key={index.toString()}>
-                    <div className="color"></div>
-                    <div className="result">{item.result}</div>
-                    <div className="type">{item.type}</div>
-                    <div className="number">{item.number}</div>
-                  </div>
-                );
-              })}
-          </div>
+              <div className="l-a">
+                {analysis.semantics &&
+                  analysis.semantics.map((item, index) => {
+                    return (
+                      <div className="l-a-line" key={index.toString()}>
+                        <div className="color"></div>
+                        <div className="result">{item.result}</div>
+                        <div className="type">
+                          <span className="word">{item.type}</span>
+                        </div>
+                        <div className="number">{item.number}</div>
+                      </div>
+                    );
+                  })}
+              </div>
 
-          <div className="tag">出话模块</div>
+              <div className="tag">出话模块</div>
 
-          <div className="word-content">{analysis.model}</div>
+              <div className="word-content">{analysis.model}</div>
 
-          <div className="tag">关联文档</div>
+              <div className="tag">关联文档</div>
 
-          <div className="word-content">{analysis.document}</div>
+              <div className="word-content">
+                {analysis.document ? (
+                  <img
+                    src={fileEx(analysis.document)}
+                    alt=""
+                    className="icon"
+                  />
+                ) : null}
+                {analysis.document}
+              </div>
+            </>
+          )}
         </div>
       </div>
     </div>

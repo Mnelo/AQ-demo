@@ -97,6 +97,29 @@
       width: 34%;
       height: 100%;
       padding: 20px 24px;
+      border-left: 1px solid rgba(0, 0, 0, 0.06);
+
+      .no-data {
+        text-align: center;
+        padding: 0 120px;
+        margin: 200px 0 0 0;
+
+        .line-one {
+          margin: 16px 0 0 0;
+          font-size: 16px;
+          font-weight: 400;
+          color: rgba(0, 0, 0, 0.65);
+          line-height: 22px;
+        }
+
+        .line-two {
+          margin: 8px 0 0 0;
+          font-size: 14px;
+          font-weight: 400;
+          color: rgba(0, 0, 0, 0.45);
+          line-height: 20px;
+        }
+      }
 
       .title {
         font-size: 20px;
@@ -124,31 +147,52 @@
         border-radius: 3px;
         border: 1px solid rgba(0, 0, 0, 0.15);
         line-height: 40px;
+
+        .icon {
+          width: 20px;
+          margin: -3px 4px 0 0;
+        }
       }
 
       .l-a {
         margin: 8px 0 0 0;
-        padding: 16px 20px;
-        height: 86px;
+        padding: 0px 20px 16px 20px;
+        min-height: 86px;
         border-radius: 3px;
         border: 1px solid rgba(0, 0, 0, 0.1);
 
         .l-a-line {
           display: flex;
+          margin: 16px 0 0 0;
 
           .color {
+            margin: 3px 8px 0 0;
+            width: 14px;
+            height: 14px;
+            background: #ff8600;
+            border-radius: 7px;
+            border: 1px solid #e5e5e5;
           }
 
           .result {
-            width: 200px;
+            width: 240px;
           }
 
           .type {
-            width: 40px;
+            width: 120px;
+
+            .word {
+              color: rgba(18, 110, 227, 1);
+              padding: 0 8px;
+              background: rgba(18, 110, 227, 0.06);
+              border-radius: 2px;
+              border: 1px solid rgba(18, 110, 227, 0.45);
+            }
           }
 
           .number {
             width: 40px;
+            color: rgba(82, 196, 26, 1);
           }
         }
       }

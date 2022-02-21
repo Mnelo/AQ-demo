@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Logo from "../../Asset/Image/head-Logo.svg";
+import Logo from "../../Asset/Image/AD.svg";
 import "./style.less";
 
 class Head extends Component {
