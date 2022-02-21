@@ -1,7 +1,9 @@
 .factor{
     width: 100%;
     padding: 40px;
+    margin-bottom: 20px;
     background: #fff;
+    position: relative;
 
     .top{
        
@@ -17,11 +19,18 @@
 
     .table-box{
         margin-top: 24px;
+
+        .ant-table-thead>tr>th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan]):before {
+            display: none;
+          }
     }
 
     .footer-box{
+        position: absolute;
         width: 250px;
-        margin: 190px auto 0;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0px auto ;
 
         .pre{
             margin-right: 12px;

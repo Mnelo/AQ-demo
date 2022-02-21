@@ -40,7 +40,11 @@ export default class BaseInfo extends Component {
             name="des"
             rules={[{ required: true, message: '输入不能为空' }]}
           >
-            <Input.TextArea className='textarea' placeholder='请用简洁的语言描述出现的问题现象，如问题现象、环境信息、关键指标信息、产品外观描述等'/>
+            <Input.TextArea
+             className='textarea'
+             placeholder='请用简洁的语言描述出现的问题现象，如问题现象、环境信息、关键指标信息、产品外观描述等'
+             autoSize={{ minRows: 5, maxRows: 10 }}
+            />
           </Form.Item>
           <div className='btn-box'>
             <Form.Item wrapperCol={{ offset: 8, span: 16 }}>

@@ -25,20 +25,29 @@ export default class Factor extends Component {
                 type: "图匹配",
                 status: "未匹配",
                 score: 190
+            },
+            {
+                name: 'aaaaa',
+                type: "参数匹配",
+                status: "已匹配",
+                score: 210
+            },
+            {
+                name: 'kkkk',
+                type: "图匹配",
+                status: "未匹配",
+                score: 190
+            },
+            {
+                name: 'bbbb',
+                type: "图匹配",
+                status: "未匹配",
+                score: 140
             }
+            
         ],
         addModalVisible: false,
         checkModalVisible: false
-    }
-
-    //上一步
-    pre = () =>{
-
-    }
-
-    //下一步
-    next = () =>{
-
     }
 
     //打开弹窗
@@ -73,6 +82,7 @@ export default class Factor extends Component {
     createFactor = () =>{
 
     }
+    
     columns = [
         {
           title: '因子名',
@@ -139,7 +149,12 @@ export default class Factor extends Component {
                     <Button type='default' onClick={this.add}>手动添加因子</Button>
                 </div>
                 <div className='table-box'>
-                <Table columns={this.columns} dataSource={data} pagination={false}/>
+                <Table
+                 columns={this.columns}
+                 dataSource={data}
+                 rowKey={record => record.id}
+                 pagination={{ pageSize: 5 }}
+                 />
                 </div>
                 <div className='footer-box'>
                     <Button type='default' 
@@ -147,10 +162,18 @@ export default class Factor extends Component {
                             this.props.prev();
                         }} 
                         className="pre"
-                    >上一步</Button>
-                    <Button type='primary' className="next" onClick={()=>{
+                    >
+                        上一步
+                    </Button>
+                    <Button
+                     type='primary'
+                     className="next"
+                     onClick={()=>{
                             this.props.next();
-                        }} >下一步</Button>
+                        }} 
+                    >
+                        下一步
+                    </Button>
                 </div>
 
                 <Modal 
@@ -224,7 +247,15 @@ export default class Factor extends Component {
                     }}
                     footer={null}
                 >
-                <Form layout="vertical">
+                <Form
+                 layout="vertical"
+                 initialValues={{
+                    des: '在鉴定样品制作（FSNC阳极）过程中，经常在阳极表面观察到黑斑现象。没有证据表明与阳极配方有任何相关性，例如59#、96.0%或96.8%的加载配方。严重时在黑点上或周围发现白色斑点黑点上有覆盖物，仔细观察',
+                    result1: '意图匹配结果1',
+                    result2: '意图匹配结果2',
+                    result3: '意图匹配结果3',
+                 }}
+                >
                 <Form.Item
                     label="现象描述"
                     name="des"
@@ -232,7 +263,6 @@ export default class Factor extends Component {
                     <Input.TextArea 
                         disabled 
                         className="input-area"
-                        placeholder='在鉴定样品制作（FSNC阳极）过程中，经常在阳极表面观察到黑斑现象。没有证据表明与阳极配方有任何相关性，例如59#、96.0%或96.8%的加载配方。严重时在黑点上或周围发现白色斑点黑点上有覆盖物，仔细观察'
                     />
                 </Form.Item>
 
@@ -240,19 +270,19 @@ export default class Factor extends Component {
                     label="意图匹配结果"
                     name="result1"
                 >
-                    <Input disabled placeholder='意图匹配结果1'></Input>
+                    <Input disabled></Input>
                 </Form.Item>
                 <Form.Item
                     label="图匹配结果"
                     name="result2"
                 >
-                    <Input disabled placeholder='图匹配结果1'></Input>
+                    <Input disabled></Input>
                 </Form.Item>
                 <Form.Item
                     label="参数匹配结果"
                     name="result3"
                 >
-                    <Input disabled placeholder='参数匹配结果1'></Input>
+                    <Input disabled></Input>
                 </Form.Item>
                 </Form>
                 </Modal>
