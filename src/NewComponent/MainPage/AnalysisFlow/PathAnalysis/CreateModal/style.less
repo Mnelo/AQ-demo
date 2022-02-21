@@ -1,0 +1,75 @@
+.add-path-ana-modal {
+  .ant-modal-body {
+    padding: 0;
+  }
+
+  h2 {
+    height: 55px;
+    padding: 0 24px;
+    margin-bottom: 24px;
+    color: var(--ad-heading-color);
+    font-size: 16px;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 600;
+    line-height: 55px;
+    border-bottom: 1px solid #eee;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .form-box {
+    
+    .form-item {
+      margin-bottom: 40px;
+      padding: 0 24px;
+    }
+
+    .item-name {
+      height: 32px;
+      font-size: 16px;
+      color: rgba(0,0,0,0.85);
+      line-height: 22px;
+
+      &.required::before {
+        content: '*';
+        display: inline-block;
+        margin-right: 4px;
+        color: #E60012;
+        font-size: 14px;
+        font-family: SimSun, sans-serif;
+        line-height: 1;
+      }
+    }
+
+
+    .ant-select {
+      width: 342px;
+    }
+
+    textarea {
+      resize: none;
+      word-break: break-all;
+      
+      &::-webkit-input-placeholder {
+        font-size: 14px;
+      }
+    }
+
+    .ant-input[disabled] {
+      color: rgba(0,0,0,0.65);
+    }
+  }
+
+  .footer {
+    height: 72px;
+    padding: 18px 24px;
+    text-align: right;
+    border-top: 1px solid #eee;
+
+    button {
+      margin-left: 8px;
+    }
+  }
+}
