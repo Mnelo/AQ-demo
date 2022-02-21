@@ -7,7 +7,7 @@
 */
 
 import React, { Component } from 'react';
-import { Steps, Button } from 'antd';
+import { Steps } from 'antd';
 import PathAnalysis from './PathAnalysis';
 import CreateReport from './CreateReport';
 import Question from './baseInfo/index';
@@ -19,7 +19,8 @@ const { Step } = Steps;
 class AnalysisFlow extends Component {
   state = {
     current: 0, // 步骤标记
-    questionInfo:{}, // 问题描述
+    questionInfo: {}, // 问题描述
+    step3Data: [], // 第三步数据, 路径分析
   };
 
   /**
@@ -45,6 +46,15 @@ class AnalysisFlow extends Component {
     this.setState({ current: current + 1 });
   }
 
+  // 再次分析
+  reAnalysis = () => {
+    this.setState({
+      current: 0,
+      questionInfo: {},
+      step3Data: []
+    })
+  }
+
   /**
    * 保存问题描述
    */
@@ -55,8 +65,13 @@ class AnalysisFlow extends Component {
     this.next()
     )
   }
+
+  // 更新第三步路径分析
+  setStep3Data = data => this.setState({ step3Data: data });
+  
+
   render() {
-    const { current, questionInfo } = this.state;
+    const { current, questionInfo, step3Data } = this.state;
 
     return (
       <div className="analysis-flow">
@@ -92,6 +107,7 @@ class AnalysisFlow extends Component {
           <div className={`step-wrapper ${current === 2 ? 'show' : 'hide'}`}>
             <PathAnalysis
               current={current}
+              setStep3Data={this.setStep3Data}
               next={this.next}
               prev={this.prev}
             />
@@ -101,8 +117,10 @@ class AnalysisFlow extends Component {
           <div className={`step-wrapper ${current === 3 ? 'show' : 'hide'}`}>
             <CreateReport
               current={current}
-              next={this.next}
+              questionInfo={questionInfo}
+              step3Data={step3Data}
               prev={this.prev}
+              reAnalysis={this.reAnalysis}
             />
           </div>
         </div>

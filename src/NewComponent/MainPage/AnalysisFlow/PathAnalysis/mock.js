@@ -1,6 +1,6 @@
 // 路径分析数据
 const genTable = () => {
-  return new Array(25).fill(0).map((_, index) => {
+  return new Array(5).fill(0).map((_, index) => {
     const num = index + 1;
 
     return {

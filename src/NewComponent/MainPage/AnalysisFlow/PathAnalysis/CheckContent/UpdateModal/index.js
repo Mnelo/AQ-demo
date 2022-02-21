@@ -38,7 +38,7 @@ const UpdateModal = props => {
       <div className="content">
         <h2>更新排查结果</h2>
 
-        <div className="form-box">
+        <div className="form-content">
           <div className="form-item">
             <p className="item-name">您选择的因子为：</p>
             <Input disabled value={defaultInfo.causeName} />
@@ -61,7 +61,7 @@ const UpdateModal = props => {
         </div>
 
         <div className="footer">
-            <Button onClick={e => setVisible(false)} onClick={e => onExclude({ ...defaultInfo, explain })}>
+            <Button onClick={e => onExclude({ ...defaultInfo, explain })}>
               排除
             </Button>
             <Button type="primary" onClick={e => onOk({ ...defaultInfo, explain })}>

@@ -20,7 +20,7 @@ const testExp = [
 ]
 
 const CheckContent = props => {
-  const { visible, setVisible, defaultInfo } = props;
+  const { setVisible, defaultInfo } = props;
   const [updateVisible, setUpdateVisible] = useState(false); // 更新结果弹窗
   const [updateInfo, setUpdateInfo] = useState({}); // 更新的行数据
 
@@ -30,7 +30,7 @@ const CheckContent = props => {
     return () => document.body.classList.remove('hide-scroll');
   }, [])
 
-  // 更新排查结果
+  // 点击更新排查结果
   const onUpdate = (e, record) => {
     setUpdateInfo(record);
     setUpdateVisible(true);
@@ -38,12 +38,14 @@ const CheckContent = props => {
 
   // 排除因子
   const onExclude = data => {
-    setUpdateInfo(false);
+    setUpdateInfo({});
+    setUpdateVisible(false);
   }
 
   // 确认因子
   const onOk = data => {
-    setUpdateInfo(false);
+    setUpdateInfo({});
+    setUpdateVisible(false);
   }
 
   // 定义表格列

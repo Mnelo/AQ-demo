@@ -15,7 +15,7 @@ import './style.less';
 const { Option } = Select;
 
 const PathAnalysis = props => {
-  const { current, next, prev } = props;
+  const { current, next, prev, setStep3Data } = props;
   const [tableData, setTableData] = useState([]);
   const [createVisible, setCreateVisible] = useState(false); // 新建弹窗
   const [checkVisible, setCheckVisible] = useState(false); // 去排查 界面
@@ -43,6 +43,12 @@ const PathAnalysis = props => {
   const onCreate = data => {
 
   };
+
+  // 点击下一步
+  const onNext = () => {
+    setStep3Data(tableData);
+    next();
+  }
 
   // 定义表格列
   const columns = [
@@ -123,7 +129,7 @@ const PathAnalysis = props => {
 
       <div className="flow-footer">
         <Button onClick={e => prev()}>上一步</Button>
-        <Button type="primary" onClick={e => next()}>下一步</Button>
+        <Button type="primary" onClick={onNext}>下一步</Button>
       </div>
 
       {/* 新建弹窗 */}
