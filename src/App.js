@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "./Component/Head";
 import Knowledge from "./NewComponent/Knowledge";
+import AnalysisFlow from "./NewComponent/AnalysisFlow";
 import "./App.less";
 import "antd/dist/antd.css";
 import "antd/dist/antd.min.css";
@@ -14,6 +15,7 @@ const App = () => {
 
       <div className="main-content">
         <Knowledge />
+        {/* <AnalysisFlow /> */}
       </div>
     </div>
   );
