@@ -1,3 +1,4 @@
+// node .\nodeServer.js 启动后端服务
 const express = require("express");
 const app = express();
 
@@ -17,6 +18,12 @@ app.all("*", function (req, res, next) {
 
 app.get("/knowledge", function (req, res) {
   res.send(nodeServerFuc.getKnowledgeData());
+});
+
+app.get("/aq", function (req, res) {
+  setTimeout(() => {
+    res.send(nodeServerFuc.getAQAnswer(req.query.search));
+  }, 1000);
 });
 
 var server = app.listen(8081, function () {

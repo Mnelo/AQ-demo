@@ -12,6 +12,7 @@ import './style.less';
 const { TextArea } = Input;
 
 const CreateReport = props => {
+  const { prev } = props;
 
   return (
     <div className="create-case-report">
@@ -83,9 +84,9 @@ const CreateReport = props => {
 
       {/* 底部按钮 */}
       <div className="flow-footer">
-        <Button>上一步</Button>
+        <Button onClick={e => prev()}>上一步</Button>
         <Button type="primary">下载报告</Button>
-        <Button>再次分析</Button>
+        <Button >再次分析</Button>
       </div>
     </div>
   );

@@ -16,7 +16,7 @@ const { Step } = Steps;
 
 class AnalysisFlow extends Component {
   state = {
-    current: 3, // 步骤标记
+    current: 2, // 步骤标记
   };
 
   /**
@@ -76,7 +76,11 @@ class AnalysisFlow extends Component {
             
           {/* 生成报告 */}
           <div className={`step-wrapper ${current === 3 ? 'show' : 'hide'}`}>
-            <CreateReport />
+            <CreateReport
+              current={current}
+              next={this.next}
+              prev={this.prev}
+            />
           </div>
         </div>
       </div>

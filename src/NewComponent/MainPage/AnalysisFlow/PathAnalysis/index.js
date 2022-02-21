@@ -109,8 +109,8 @@ const PathAnalysis = props => {
       </div>
 
       <div className="flow-footer">
-        <Button>上一步</Button>
-        <Button type="primary">下一步</Button>
+        <Button onClick={e => prev()}>上一步</Button>
+        <Button type="primary" onClick={e => next()}>下一步</Button>
       </div>
     </div>
   );
