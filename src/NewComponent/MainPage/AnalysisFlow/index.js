@@ -10,13 +10,16 @@ import React, { Component } from 'react';
 import { Steps, Button } from 'antd';
 import PathAnalysis from './PathAnalysis';
 import CreateReport from './CreateReport';
+import Question from './baseInfo/index';
+import Factor from './factor/index';
 import './style.less';
 
 const { Step } = Steps;
 
 class AnalysisFlow extends Component {
   state = {
-    current: 2, // 步骤标记
+    current: 0, // 步骤标记
+    questionInfo:{}, // 问题描述
   };
 
   /**
@@ -42,8 +45,18 @@ class AnalysisFlow extends Component {
     this.setState({ current: current + 1 });
   }
 
+  /**
+   * 保存问题描述
+   */
+  saveProblem = (obj) =>{
+    this.setState({
+      questionInfo: obj
+    },
+    this.next()
+    )
+  }
   render() {
-    const { current } = this.state;
+    const { current, questionInfo } = this.state;
 
     return (
       <div className="analysis-flow">
@@ -58,11 +71,21 @@ class AnalysisFlow extends Component {
 
         <div className="main-content" >
           <div className={`step-wrapper ${current === 0 ? 'show' : 'hide'}`}>
-            问题描述
+            <Question
+              current={current}
+              next={this.next}
+              prev={this.prev}
+              saveProblem={this.saveProblem}
+            />
           </div>
 
           <div className={`step-wrapper ${current === 1 ? 'show' : 'hide'}`}>
-            因子匹配
+            <Factor
+              current={current}
+              next={this.next}
+              prev={this.prev}
+              questionInfo={questionInfo}
+            />
           </div>
 
           {/* 路径分析 */}
