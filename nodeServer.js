@@ -26,6 +26,24 @@ app.get("/aq", function (req, res) {
   }, 1000);
 });
 
+app.get("/factorList", function (req, res) {
+  setTimeout(() => {
+    res.send(nodeServerFuc.getFactorList(req.query.search));
+  }, 500);
+});
+
+app.get("/analysisList", function (req, res) {
+  setTimeout(() => {
+    res.send(nodeServerFuc.getAnalysis(req.query.search));
+  }, 500);
+});
+
+app.get("/report", function (req, res) {
+  setTimeout(() => {
+    res.send(nodeServerFuc.getReport(req.query.search));
+  }, 500);
+});
+
 var server = app.listen(8081, function () {
   // var host = server.address().address;
   var port = server.address().port;

@@ -1,30 +1,46 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /**
  * 生成报告
  * @author Jason.ji
  * @date 2022/02/18
  *
-*/
+ */
 
-import React, { memo } from 'react';
-import { Input, Button } from 'antd';
-import file from './report.docx';
-import './style.less';
+import React, { memo, useEffect } from "react";
+import { Input, Button } from "antd";
+import axios from "axios";
+import file from "./report.docx";
+import "./style.less";
 
 const { TextArea } = Input;
 
-const CreateReport = props => {
-  const { prev, questionInfo, step3Data, reAnalysis } = props;
+const CreateReport = (props) => {
+  const { current, prev, questionInfo, step3Data, reAnalysis } = props;
+
+  useEffect(() => {
+    if (current !== 3) return;
+
+    getReportData();
+  }, [current]);
+
+  const getReportData = async () => {
+    const { data } = await axios.get(
+      `http://localhost:8081/report?search=${questionInfo.question}`
+    );
+
+    console.log(data);
+  };
 
   // 下载
   const download = () => {
-    let a = document.createElement('a');
-    a.style = 'display: none';
-    a.download = '归因分析报告';
+    let a = document.createElement("a");
+    a.style = "display: none";
+    a.download = "归因分析报告";
     a.href = file;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
-  }
+  };
 
   return (
     <div className="create-case-report">
@@ -70,23 +86,22 @@ const CreateReport = props => {
                 <Input />
               </div>
             </div>
-          )
+          );
         })}
-
       </div>
 
       {/* 底部按钮 */}
       <div className="flow-footer">
-        <Button onClick={e => prev()}>上一步</Button>
-        <Button type="primary" onClick={e => download()}>下载报告</Button>
-        <Button onClick={e => reAnalysis()}>再次分析</Button>
+        <Button onClick={(e) => prev()}>上一步</Button>
+        <Button type="primary" onClick={(e) => download()}>
+          下载报告
+        </Button>
+        <Button onClick={(e) => reAnalysis()}>再次分析</Button>
       </div>
     </div>
   );
 };
 
-CreateReport.defaultProps = {
-
-};
+CreateReport.defaultProps = {};
 
 export default memo(CreateReport);
