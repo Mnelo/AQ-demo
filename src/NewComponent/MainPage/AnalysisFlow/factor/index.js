@@ -18,6 +18,10 @@ export default class Factor extends Component {
 		},
 	};
 
+	componentDidMount() {
+		this.getListData();
+	}
+
 	componentDidUpdate(preProps) {
 		if (
 			preProps.current !== this.props.current &&
@@ -79,6 +83,7 @@ export default class Factor extends Component {
 				newData = [...newData, item];
 			}
 		});
+
 		this.setState({
 			data: newData,
 		});
@@ -177,7 +182,8 @@ export default class Factor extends Component {
 	};
 
 	render() {
-		const { data, addModalVisible, checkModalVisible, reasonData } = this.state;
+		const { data, addModalVisible, checkModalVisible, reasonData } =
+			this.state;
 		const { questionInfo } = this.props;
 		return (
 			<div className="factor">
