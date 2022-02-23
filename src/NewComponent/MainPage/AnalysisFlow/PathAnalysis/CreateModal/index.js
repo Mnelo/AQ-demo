@@ -15,7 +15,11 @@ const { Option } = Select;
 const CreateModal = props => {
   const { visible, tableData, setVisible, onCreate } = props;
   const [causeData, setCauseData] = useState({}); // 新建根因
-  const optionData = useMemo(() => tableData.map(d => d.phenomenon), [tableData]); // 问题现象
+  const optionData = useMemo(() => {
+    const options = tableData.map(d => d.phenomenon);
+
+    return [...new Set(options)];
+  }, [tableData]); // 问题现象
 
   useEffect(() => {
     setCauseData({ phenomenon: optionData[0] })
