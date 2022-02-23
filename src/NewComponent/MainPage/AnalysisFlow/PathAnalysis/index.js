@@ -6,16 +6,21 @@
 */
 
 import React, { memo, useState, useEffect } from 'react';
-import { Button, Select, Table } from 'antd';
+import { Button, Select, Table, Drawer } from 'antd';
 import { tableData as testData } from './mock';
+import CreateModal from './CreateModal';
+import CheckContent from './CheckContent';
 import './style.less';
 
 const { Option } = Select;
 
 const PathAnalysis = props => {
-  const { current, next, prev } = props;
+  const { current, next, prev, setStep3Data } = props;
   const [tableData, setTableData] = useState([]);
- 
+  const [createVisible, setCreateVisible] = useState(false); // 新建弹窗
+  const [checkVisible, setCheckVisible] = useState(false); // 去排查 界面
+  const [checkInfo, setCheckInfo] = useState({}); // 排查数据
+
   useEffect(() => {
     if (current !== 2) return;
 
@@ -28,7 +33,21 @@ const PathAnalysis = props => {
    * @param {Object} record 行数据
    */
   const toCheck = (e, record) => {
-    console.log(record)
+    setCheckInfo(record);
+    setCheckVisible(true);
+  };
+
+  /** 
+   * 创建根因
+   */
+  const onCreate = data => {
+
+  };
+
+  // 点击下一步
+  const onNext = () => {
+    setStep3Data(tableData);
+    next();
   }
 
   // 定义表格列
@@ -80,10 +99,10 @@ const PathAnalysis = props => {
     <div className="path-analysis">
       <div className="tool-box">
         <div className="btn-box">
-          <Button type="primary">新建根因</Button>
+          <Button type="primary" onClick={e => setCreateVisible(true)}>新建根因</Button>
           <Button>逻辑树探索</Button>
         </div>
-        
+
         <div className="input-box">
           <span className="select-desc">问题现象</span>
           <Select value={'all'}>
@@ -98,7 +117,7 @@ const PathAnalysis = props => {
       </div>
 
       <div className="table-box">
-      <Table
+        <Table
           dataSource={tableData}
           columns={columns}
           className="path-analysis-table"
@@ -110,8 +129,37 @@ const PathAnalysis = props => {
 
       <div className="flow-footer">
         <Button onClick={e => prev()}>上一步</Button>
-        <Button type="primary" onClick={e => next()}>下一步</Button>
+        <Button type="primary" onClick={onNext}>下一步</Button>
       </div>
+
+      {/* 新建弹窗 */}
+      <CreateModal
+        visible={createVisible}
+        setVisible={setCreateVisible}
+        onCreate={onCreate}
+      />
+
+      {/* 去排查 抽屉 */}
+      <Drawer
+        className="to-check-drawer"
+        visible={checkVisible}
+        destroyOnClose
+        closable={false}
+        title={null}
+        footer={null}
+        mask={false}
+        push={false}
+        zIndex={520}
+        height={'100vh'}
+        placement="bottom"
+        onClose={() => setCheckVisible(false)}
+      >
+        <CheckContent
+          defaultInfo={checkInfo}
+          visible={checkVisible}
+          setVisible={setCheckVisible}
+        />
+      </Drawer>
     </div>
   );
 };
