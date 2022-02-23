@@ -6,7 +6,7 @@
  *
  */
 
-import React, { memo, useEffect } from "react";
+import React, { memo, useEffect, useState, useRef } from "react";
 import { Input, Button } from "antd";
 import axios from "axios";
 import file from "./report.docx";
@@ -15,10 +15,14 @@ import "./style.less";
 const { TextArea } = Input;
 
 const CreateReport = (props) => {
-  const { current, prev, questionInfo, step3Data, reAnalysis } = props;
+  const { current, prev, questionInfo, reAnalysis } = props;
+  const preQ = useRef(''); // 标记问题
+  const [reportData, setReportData] = useState({});
 
   useEffect(() => {
-    if (current !== 3) return;
+    if (!current || preQ.current === questionInfo.question) return;
+
+    preQ.current = questionInfo.question;
 
     getReportData();
   }, [current]);
@@ -28,12 +32,12 @@ const CreateReport = (props) => {
       `http://localhost:8081/report?search=${questionInfo.question}`
     );
 
-    console.log(data);
+    setReportData(data.data || {});
   };
 
   // 下载
   const download = () => {
-    let a = document.createElement("a");
+    const a = document.createElement("a");
     a.style = "display: none";
     a.download = "归因分析报告";
     a.href = file;
@@ -62,28 +66,28 @@ const CreateReport = (props) => {
         <div className="row">
           <div className="row-item">
             <h2 className="row-h2">现象描述</h2>
-            <TextArea value={questionInfo.des} />
+            <TextArea autoSize value={questionInfo.des} />
           </div>
         </div>
 
         <div className="row">
           <div className="row-item">
             <h2 className="row-h2">问题排查过程</h2>
-            <TextArea />
+            <TextArea autoSize value={reportData.process} />
           </div>
         </div>
 
-        {step3Data.map((item, index) => {
+        {(reportData.reason || []).map((item, index) => {
           return (
             <div className="row equally" key={index}>
               <div className="row-item">
                 <h2 className="row-h2">{`问题根因${index + 1}`}</h2>
-                <Input value={item.cause} />
+                <Input value={item.des} />
               </div>
 
               <div className="row-item">
                 <h2 className="row-h2">建议改善措施</h2>
-                <Input />
+                <Input value={item.method} />
               </div>
             </div>
           );

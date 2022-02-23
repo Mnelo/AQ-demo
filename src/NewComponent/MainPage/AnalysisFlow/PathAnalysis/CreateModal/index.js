@@ -5,17 +5,21 @@
  *
 */
 
-import React, { memo, useState } from 'react';
+import React, { memo, useState, useMemo, useEffect } from 'react';
 import { Modal, Input, Select, Button } from 'antd';
 import './style.less';
 
 const { TextArea } = Input;
 const { Option } = Select;
-const testCause = ['问题现象1', '问题现象2', '问题现象3'];
 
 const CreateModal = props => {
-  const { visible, setVisible, onCreate } = props;
+  const { visible, tableData, setVisible, onCreate } = props;
   const [causeData, setCauseData] = useState({}); // 新建根因
+  const optionData = useMemo(() => tableData.map(d => d.phenomenon), [tableData]); // 问题现象
+
+  useEffect(() => {
+    setCauseData({ phenomenon: optionData[0] })
+  }, [optionData]);
 
   return (
     <Modal
@@ -35,10 +39,10 @@ const CreateModal = props => {
           <p className="item-name required">请选择问题现象：</p>
           <Select
             className="cause-select"
-            defaultValue={testCause[0]}
-            onChange={value => setCauseData(pre => ({...causeData, phenomenon: value}))}
+            value={causeData.phenomenon}
+            onChange={value => setCauseData({...causeData, phenomenon: value})}
           >
-            {testCause.map(item => (
+            {optionData.map(item => (
               <Option key={item} value={item}>{item}</Option>
             ))}
           </Select>
@@ -59,7 +63,9 @@ const CreateModal = props => {
           <Button onClick={e => setVisible(false)}>
             取消
           </Button>
-          <Button type="primary" onClick={e => onCreate(causeData)}>
+          <Button type="primary" onClick={e => {
+            onCreate({ ...causeData, matchType: '人工添加' });
+          }}>
             创建
           </Button>
       </div>

@@ -19,7 +19,6 @@ class AnalysisFlow extends Component {
   state = {
     current: 0, // 步骤标记
     questionInfo: {}, // 问题描述
-    step3Data: [], // 第三步数据, 路径分析
   };
 
   /**
@@ -50,7 +49,6 @@ class AnalysisFlow extends Component {
     this.setState({
       current: 0,
       questionInfo: {},
-      step3Data: [],
     });
   };
 
@@ -68,11 +66,8 @@ class AnalysisFlow extends Component {
     );
   };
 
-  // 更新第三步路径分析
-  setStep3Data = (data) => this.setState({ step3Data: data });
-
   render() {
-    const { current, questionInfo, step3Data } = this.state;
+    const { current, questionInfo } = this.state;
 
     return (
       <div className="analysis-flow">
@@ -109,7 +104,6 @@ class AnalysisFlow extends Component {
             <PathAnalysis
               current={current}
               questionInfo={questionInfo}
-              setStep3Data={this.setStep3Data}
               next={this.next}
               prev={this.prev}
             />
@@ -120,7 +114,6 @@ class AnalysisFlow extends Component {
             <CreateReport
               current={current}
               questionInfo={questionInfo}
-              step3Data={step3Data}
               prev={this.prev}
               reAnalysis={this.reAnalysis}
             />

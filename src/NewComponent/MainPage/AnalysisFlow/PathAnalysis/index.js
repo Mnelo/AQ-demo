@@ -6,10 +6,9 @@
  *
  */
 
-import React, { memo, useState, useEffect } from "react";
+import React, { memo, useState, useEffect, useRef } from "react";
 import { Button, Select, Table, Drawer } from "antd";
 import axios from "axios";
-import { tableData as testData } from "./mock";
 import CreateModal from "./CreateModal";
 import CheckContent from "./CheckContent";
 import "./style.less";
@@ -17,18 +16,19 @@ import "./style.less";
 const { Option } = Select;
 
 const PathAnalysis = (props) => {
-  const { current, next, prev, setStep3Data, questionInfo } = props;
+  const { current, next, prev, questionInfo } = props;
+  const preQ = useRef(''); // 标记问题
   const [tableData, setTableData] = useState([]);
   const [createVisible, setCreateVisible] = useState(false); // 新建弹窗
   const [checkVisible, setCheckVisible] = useState(false); // 去排查 界面
   const [checkInfo, setCheckInfo] = useState({}); // 排查数据
 
   useEffect(() => {
-    if (current !== 2) return;
+    if (!current || preQ.current === questionInfo.question) return;
 
+    preQ.current = questionInfo.question;
     getPathAnalysisList();
-    setTableData(testData);
-  }, [current]);
+  }, [current, questionInfo]);
 
   /**
    * @description 获取路径分析list
@@ -38,7 +38,7 @@ const PathAnalysis = (props) => {
       `http://localhost:8081/analysisList?search=${questionInfo.question}`
     );
 
-    console.log(data);
+    setTableData(data.list || []);
   };
 
   /**
@@ -54,11 +54,58 @@ const PathAnalysis = (props) => {
   /**
    * 创建根因
    */
-  const onCreate = (data) => {};
+  const onCreate = (data) => {
+    setTableData(pre => [
+      {
+        ...data,
+        "score": 100,
+        "status": "未采纳",
+        "path": "容量损失 - 负极侧隔膜出现黑斑 - 碳负极脱粉粘结到隔膜表面 - 电池局部高温 - 电池极化放电 - 电池卷心内存在有活性物质附粉",
+        "file": [
+          "锂离子电池隔膜黑斑造成低压原因分析.pdf",
+          "化成容量损失失效分析报告20190312.ppt",
+          "PP330型号电池故障分析记录.docx"
+        ],
+        "checkList": [
+          {
+            "name": "容量损失",
+            "status": "已匹配",
+            "method": "充放电测试仪进行容量测定"
+          },
+          {
+            "name": "负极侧隔膜出现黑斑",
+            "status": "已匹配",
+            "method": "电镜扫描能谱分析"
+          },
+          {
+            "name": "碳负极脱粉粘结到隔膜表面",
+            "status": "已匹配",
+            "method": "显微观察"
+          },
+          {
+            "name": "电池局部高温",
+            "status": "已匹配",
+            "method": "温度记录仪配热电阻测温度"
+          },
+          {
+            "name": "电池极化放电",
+            "status": "未匹配",
+            "method": "电镜扫描能谱分析"
+          },
+          {
+            "name": "电池卷心内存在有活性物质附粉",
+            "status": "未匹配",
+            "method": "材料成分分析"
+          }
+        ]
+      },
+      ...pre
+    ]);
+    setCreateVisible(false);
+  };
 
   // 点击下一步
   const onNext = () => {
-    setStep3Data(tableData);
     next();
   };
 
@@ -68,39 +115,36 @@ const PathAnalysis = (props) => {
       title: <span className="table-th-title">{"问题现象"}</span>,
       dataIndex: "phenomenon",
       ellipsis: true,
-      width: 300,
+      width: 280,
     },
     {
       title: <span className="table-th-title">{"问题根因"}</span>,
       dataIndex: "cause",
       ellipsis: true,
-      width: 300,
+      width: 280,
     },
     {
       title: <span className="table-th-title">{"匹配类型"}</span>,
       dataIndex: "matchType",
       ellipsis: true,
-      width: 250,
+      width: 230,
     },
     {
       title: <span className="table-th-title">{"置信分"}</span>,
       dataIndex: "score",
       ellipsis: true,
-      width: 120,
+      width: 100,
     },
     {
       title: <span className="table-th-title">{"因子状态"}</span>,
       dataIndex: "status",
       ellipsis: true,
-      width: 120,
-      render: (status, record) => {
-        return status ? "已采纳" : "未采纳";
-      },
+      width: 100
     },
     {
       title: <span className="table-th-title">{"操作项"}</span>,
       ellipsis: true,
-      width: 120,
+      width: 100,
       render: (record) => (
         <span className="to-check-btn" onClick={(e) => toCheck(e, record)}>
           去排查
@@ -141,7 +185,7 @@ const PathAnalysis = (props) => {
           dataSource={tableData}
           columns={columns}
           className="path-analysis-table"
-          rowKey={(record) => record.id}
+          rowKey={(record) => record.cause}
           tableLayout="fixed"
           scroll={{ x: "100%" }}
         />
@@ -157,6 +201,7 @@ const PathAnalysis = (props) => {
       {/* 新建弹窗 */}
       <CreateModal
         visible={createVisible}
+        tableData={tableData}
         setVisible={setCreateVisible}
         onCreate={onCreate}
       />
