@@ -5,6 +5,7 @@ import { getFileEx } from "../../../func/fileExtension";
 import jiqiren from "../../../Asset/Image/jiqiren.svg";
 import rentou from "../../../Asset/Image/rentou.svg";
 import noData from "../../../Asset/Image/zanwuneirong.svg";
+import load from "../../../Asset/Image/three-dots.svg";
 import "./style.less";
 
 const AQ = () => {
@@ -47,7 +48,9 @@ const AQ = () => {
             <div className="a-head-img">
               <img src={jiqiren} alt="" className="icon" />
             </div>
-            <div className="a-content">...</div>
+            <div className="a-content">
+              <img src={load} alt="" className="load" />
+            </div>
           </div>,
         ],
       ];
@@ -77,7 +80,6 @@ const AQ = () => {
             <div className="a-content">未搜索到结果</div>
           </div>
         );
-
         setAnalysis(analysis);
       }
 
