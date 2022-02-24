@@ -41,7 +41,7 @@ const UpdateModal = props => {
         <div className="form-content">
           <div className="form-item">
             <p className="item-name">您选择的因子为：</p>
-            <Input disabled value={defaultInfo.causeName} />
+            <Input disabled value={defaultInfo.name} />
           </div>
 
           <div className="form-item">

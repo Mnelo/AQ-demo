@@ -8,19 +8,12 @@
 import React, { memo, useState, useEffect } from 'react';
 import { Button, Table } from 'antd';
 import { switchIcon } from '../SwitchIcon';
-import { pathTable } from '../mock'
 import UpdateModal from './UpdateModal';
 import './style.less';
 
-const testExp = [
-  '多轮测试的实验结果.pdf',
-  '黑斑产生的原因原因.pdf',
-  '如何分辨不同的黑斑.txt',
-  '黑斑会给后续测试结果带来什么影响.pdf'
-]
-
 const CheckContent = props => {
   const { setVisible, defaultInfo } = props;
+  const [showData, setShowData] = useState({});
   const [updateVisible, setUpdateVisible] = useState(false); // 更新结果弹窗
   const [updateInfo, setUpdateInfo] = useState({}); // 更新的行数据
 
@@ -30,6 +23,10 @@ const CheckContent = props => {
     return () => document.body.classList.remove('hide-scroll');
   }, [])
 
+  useEffect(() => {
+    setShowData({ ...defaultInfo });
+  }, [defaultInfo])
+
   // 点击更新排查结果
   const onUpdate = (e, record) => {
     setUpdateInfo(record);
@@ -38,12 +35,34 @@ const CheckContent = props => {
 
   // 排除因子
   const onExclude = data => {
+    const newData = { ...showData };
+
+    newData.checkList = newData.checkList.map(item => {
+      if (item.name === data.name) {
+        return { ...data, status: '已排除' };
+      }
+
+      return item;
+    });
+
+    setShowData(newData);
     setUpdateInfo({});
     setUpdateVisible(false);
   }
 
   // 确认因子
   const onOk = data => {
+    const newData = { ...showData };
+
+    newData.checkList = newData.checkList.map(item => {
+      if (item.name === data.name) {
+        return { ...data, status: '已匹配' };
+      }
+
+      return item;
+    });
+
+    setShowData(newData);
     setUpdateInfo({});
     setUpdateVisible(false);
   }
@@ -52,29 +71,26 @@ const CheckContent = props => {
   const columns = [
     {
       title: <span className="table-th-title">{'因子名'}</span>,
-      dataIndex: 'causeName',
+      dataIndex: 'name',
       ellipsis: true,
       width: 350
     },
     {
       title: <span className="table-th-title">{'因子状态'}</span>,
-      dataIndex: 'causeStatus',
+      dataIndex: 'status',
       ellipsis: true,
-      width: 150,
-      render: (status, record) => {
-        return status ? '已确认' : '未确认'
-      }
+      width: 150
     },
     {
       title: <span className="table-th-title">{'检测方法'}</span>,
       dataIndex: 'method',
       ellipsis: true,
-      width: 150
+      width: 250
     },
     {
       title: <span className="table-th-title">{'操作项'}</span>,
       ellipsis: true,
-      width: 250,
+      width: 150,
       render: record => (
         <span className="to-check-btn" onClick={e => onUpdate(e, record)}>更新排查结果</span>
       )
@@ -94,31 +110,31 @@ const CheckContent = props => {
           <div className="detail">
             <p className="p-item">
               <span className="label-name">问题现象</span>：
-              <span>{defaultInfo.phenomenon}</span>
+              <span>{showData.phenomenon}</span>
             </p>
 
             <p className="p-item">
               <span className="label-name">问题根因</span>：
-              <span>{defaultInfo.cause}</span>
+              <span>{showData.cause}</span>
             </p>
 
             <p className="p-item">
               <span className="label-name">归因路径</span>：
-              <span>2022-02-12 10:10:10</span>
+              <span>{showData.path}</span>
             </p>
 
             <p className="p-item">
               <span className="label-name">置信分</span>：
-              <span>{defaultInfo.score}</span>
+              <span>{showData.score}</span>
             </p>
           </div>
 
           <div className="table-box">
             <Table
-              dataSource={pathTable}
+              dataSource={showData.checkList || []}
               columns={columns}
               className="path-analysis-table"
-              rowKey={record => record.id}
+              rowKey={record => record.name}
               tableLayout="fixed"
               scroll={{ x: '100%' }}
             />
@@ -129,7 +145,7 @@ const CheckContent = props => {
 
           <div className="exp-list">
             <ul>
-              {testExp.map((item, index) => {
+              {(showData.file || []).map((item, index) => {
                 return (
                   <li className="exp-item" key={index}>
                     <span className="icon">{switchIcon('file', item)}</span>

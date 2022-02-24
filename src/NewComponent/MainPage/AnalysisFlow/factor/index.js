@@ -18,6 +18,10 @@ export default class Factor extends Component {
     },
   };
 
+  componentDidMount() {
+    this.getListData();
+  }
+
   componentDidUpdate(preProps) {
     if (preProps.current !== this.props.current && this.props.current === 1) {
       this.getListData();
@@ -164,7 +168,7 @@ export default class Factor extends Component {
       },
     ];
     const newData = obj.concat(data);
-
+    console.log(newData);
     this.setState(
       {
         addModalVisible: false,

@@ -1,51 +1,217 @@
 {
-    "res": [
-      {
-        "search": "磷酸铁锂电池",
-        "list": [
-         {
-            "phenomenon": "容量损失",
-            "cause": "电池卷心内存在有活性物质附粉",
-            "matchType": "图匹配",
-            "score": 75,
-            "status": "已采纳",
-            "path":"容量损失 - 负极侧隔膜出现黑斑 - 碳负极脱粉粘结到隔膜表面 - 电池局部高温 - 电池极化放电 - 电池卷心内存在有活性物质附粉",
-            "file":["锂离子电池隔膜黑斑造成低压原因分析.pdf","化成容量损失失效分析报告20190312.ppt","PP330型号电池故障分析记录.word"],
-            "checkList": [
-                {
-                    "name":"容量损失",
-                    "status":"已匹配",
-                    "method":"充放电测试仪进行容量测定"
-                },
-                {
-                    "name":"负极侧隔膜出现黑斑",
-                    "status":"已匹配",
-                    "method":"电镜扫描能谱分析"
-                },
-                {
-                    "name":"碳负极脱粉粘结到隔膜表面",
-                    "status":"已匹配",
-                    "method":"显微观察"
-                },
-                {
-                    "name":"电池局部高温",
-                    "status":"已匹配",
-                    "method":"温度记录仪配热电阻测温度"
-                },
-                {
-                    "name":"电池极化放电",
-                    "status":"未匹配",
-                    "method":"电镜扫描能谱分析"
-                },
-                {
-                    "name":"电池卷心内存在有活性物质附粉",
-                    "status":"未匹配",
-                    "method":"材料成分分析"
-                }
-            ]
-         }
-        ]
-      }
-    ]
-  }
-  
+  "res": [
+    {
+      "search": "磷酸铁锂电池",
+      "list": [
+        {
+          "phenomenon": "容量损失",
+          "cause": "电池卷心内存在有活性物质附粉",
+          "matchType": "图匹配",
+          "score": 75,
+          "status": "已采纳",
+          "path": "容量损失 - 负极侧隔膜出现黑斑 - 碳负极脱粉粘结到隔膜表面 - 电池局部高温 - 电池极化放电 - 电池卷心内存在有活性物质附粉",
+          "file": [
+            "锂离子电池隔膜黑斑造成低压原因分析.pdf",
+            "化成容量损失失效分析报告20190312.ppt",
+            "PP330型号电池故障分析记录.docx"
+          ],
+          "checkList": [
+            {
+              "name": "容量损失",
+              "status": "已匹配",
+              "method": "充放电测试仪进行容量测定"
+            },
+            {
+              "name": "负极侧隔膜出现黑斑",
+              "status": "已匹配",
+              "method": "电镜扫描能谱分析"
+            },
+            {
+              "name": "碳负极脱粉粘结到隔膜表面",
+              "status": "已匹配",
+              "method": "显微观察"
+            },
+            {
+              "name": "电池局部高温",
+              "status": "已匹配",
+              "method": "温度记录仪配热电阻测温度"
+            },
+            {
+              "name": "电池极化放电",
+              "status": "未匹配",
+              "method": "电镜扫描能谱分析"
+            },
+            {
+              "name": "电池卷心内存在有活性物质附粉",
+              "status": "未匹配",
+              "method": "材料成分分析"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "search": "手机电池",
+      "list": [
+        {
+          "phenomenon": "电池鼓包",
+          "cause": "SEI膜耐热性不好",
+          "matchType": "参数匹配",
+          "score": 95,
+          "status": "已采纳",
+          "path": "电池鼓包-异常产气-SEI膜受热发生反应-SEI膜耐热性不好&电池处于高温",
+          "file": [
+            "AAAAA.pdf"
+          ],
+          "checkList": [
+            {
+              "name": "电池鼓包",
+              "status": "已匹配",
+              "method": "XXXX"
+            },
+            {
+              "name": "异常产气",
+              "status": "未匹配",
+              "method": "XXXXXX"
+            },
+            {
+              "name": "电解液受热分解",
+              "status": "未匹配",
+              "method": "XXXXXXXXXX"
+            },
+            {
+              "name": "内部短路",
+              "status": "未匹配",
+              "method": "XXXXXXXXXXXXX"
+            },
+            {
+              "name": "隔膜失效导致正负极微接触",
+              "status": "已匹配",
+              "method": "XXXXXXXXXXXXXXX"
+            },
+            {
+              "name": "隔膜刺穿",
+              "status": "未匹配",
+              "method": "XXXXXXXXXXXXXXXXXX"
+            },
+            {
+              "name": "电芯经过成型后隔膜轻微受损",
+              "status": "未匹配",
+              "method": "XXXXXXXXXXX"
+            },
+            {
+              "name": "生产过程极片上存在少量浮粉",
+              "status": "未匹配",
+              "method": "XXXXXXXXXXXXXXX"
+            }
+          ]
+        },
+        {
+          "phenomenon": "电池鼓包",
+          "cause": "电解液耐热性不好",
+          "matchType": "参数匹配",
+          "score": 95,
+          "status": "已采纳",
+          "path": "电池鼓包-异常产气-电解液受热分解-电解液耐热性不好&电池处于高温",
+          "file": [
+            "BBBBB.pdf",
+            "CCCCC.ppt"
+          ],
+          "checkList": [
+            {
+              "name": "电池鼓包",
+              "status": "已匹配",
+              "method": "XXXX"
+            },
+            {
+              "name": "异常产气",
+              "status": "未匹配",
+              "method": "XXXXXX"
+            },
+            {
+              "name": "电解液受热分解",
+              "status": "未匹配",
+              "method": "XXXXXXXXXX"
+            },
+            {
+              "name": "内部短路",
+              "status": "未匹配",
+              "method": "XXXXXXXXXXXXX"
+            },
+            {
+              "name": "隔膜失效导致正负极微接触",
+              "status": "已匹配",
+              "method": "XXXXXXXXXXXXXXX"
+            },
+            {
+              "name": "隔膜刺穿",
+              "status": "未匹配",
+              "method": "XXXXXXXXXXXXXXXXXX"
+            },
+            {
+              "name": "电芯经过成型后隔膜轻微受损",
+              "status": "未匹配",
+              "method": "XXXXXXXXXXX"
+            },
+            {
+              "name": "生产过程极片上存在少量浮粉",
+              "status": "未匹配",
+              "method": "XXXXXXXXXXXXXXX"
+            }
+          ]
+        },
+        {
+          "phenomenon": "电池鼓包",
+          "cause": "隔膜失效导致正负极微接触",
+          "matchType": "图匹配",
+          "score": 87,
+          "status": "已采纳",
+          "path": "电池鼓包-异常产气-电解液受热分解-内部短路-隔膜失效导致正负极微接触-隔膜刺穿-电芯经过成型后隔膜轻微受损-生产过程极片上存在少量浮粉",
+          "file": ["DDDDDD.docx"],
+          "checkList": [
+            {
+              "name": "电池鼓包",
+              "status": "已匹配",
+              "method": "XXXX"
+            },
+            {
+              "name": "异常产气",
+              "status": "未匹配",
+              "method": "XXXXXX"
+            },
+            {
+              "name": "电解液受热分解",
+              "status": "未匹配",
+              "method": "XXXXXXXXXX"
+            },
+            {
+              "name": "内部短路",
+              "status": "未匹配",
+              "method": "XXXXXXXXXXXXX"
+            },
+            {
+              "name": "隔膜失效导致正负极微接触",
+              "status": "已匹配",
+              "method": "XXXXXXXXXXXXXXX"
+            },
+            {
+              "name": "隔膜刺穿",
+              "status": "未匹配",
+              "method": "XXXXXXXXXXXXXXXXXX"
+            },
+            {
+              "name": "电芯经过成型后隔膜轻微受损",
+              "status": "未匹配",
+              "method": "XXXXXXXXXXX"
+            },
+            {
+              "name": "生产过程极片上存在少量浮粉",
+              "status": "未匹配",
+              "method": "XXXXXXXXXXXXXXX"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
