@@ -58,7 +58,6 @@ export default class Factor extends Component {
 
   //改变状态
   change = (record) => {
-    console.log(1);
     const { data } = this.state;
     let newData = [];
     const newstatus = record.status === "已匹配" ? "未匹配" : "已匹配";
@@ -77,13 +76,10 @@ export default class Factor extends Component {
         newData = [...newData, item];
       }
     });
-    console.log(data);
-    this.setState(
-      {
-        data: newData,
-      },
-      console.log(2)
-    );
+
+    this.setState({
+      data: newData,
+    });
   };
   //链接到创建因子
   createFactor = () => {};
@@ -168,7 +164,7 @@ export default class Factor extends Component {
       },
     ];
     const newData = obj.concat(data);
-    console.log(newData);
+
     this.setState(
       {
         addModalVisible: false,
@@ -179,7 +175,6 @@ export default class Factor extends Component {
   };
 
   render() {
-    console.log(3);
     const { data, addModalVisible, checkModalVisible, reasonData } = this.state;
     const { questionInfo } = this.props;
     return (

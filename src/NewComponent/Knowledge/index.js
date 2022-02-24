@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Input, Select } from "antd";
 import axios from "axios";
 import "./style.less";
 
+const { Option } = Select;
+const { Search } = Input;
 const Knowledge = () => {
   const navigate = useNavigate();
 
@@ -28,7 +31,18 @@ const Knowledge = () => {
       <div className="des">欢迎使用AnyDATA先进分析能力展示平台！</div>
 
       <div className="content">
-        <div className="head"></div>
+        <div className="head">
+          <div className="search">
+            <Search placeholder="请输入" />
+          </div>
+          <div className="select-box">
+            <Select className="select" defaultValue="最近访问">
+              <Option value="最近访问">最近访问</Option>
+              <Option value="首字母顺序排列">首字母顺序排列</Option>
+            </Select>
+          </div>
+          <div className="word">排序</div>
+        </div>
 
         <div className="card-table">
           {list.map((item, index) => {
