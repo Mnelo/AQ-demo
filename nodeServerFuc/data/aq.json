@@ -1,23 +1,166 @@
 {
-    "res": [
+  "res": [
+    {
+      "type": "left",
+      "question": "D130H70压缩机的转速是多少？",
+      "answer": "D130H70压缩机的转速是 400r/min。",
+      "participle": "D130H70 | 压缩机 | 的 | 转速 | 是多少",
+      "semantics": [
         {
-            "question": "D130H70压缩机的转速是多少？",
-            "answer": "D130H70压缩机的转速是 400r/min。",
-            "participle": "D130H70 | 压缩机 | 的 | 转速 | 是多少",
-            "semantics": [
-                {
-                    "result": "D130H70=压缩机",
-                    "type": "实体",
-                    "number": 100
-                },
-                {
-                    "result": "转速",
-                    "type": "属性",
-                    "number": 88
-                }
-            ],
-            "model": "实体属性查询",
-            "document": "D130H70压缩机操作手册.docx"
+          "result": "D130H70=压缩机",
+          "type": "实体",
+          "number": 100
+        },
+        {
+          "result": "转速",
+          "type": "属性",
+          "number": 88
         }
-    ]
+      ],
+      "model": "实体属性查询",
+      "document": "D130H70压缩机操作手册.docx",
+      "isClick": true
+    },
+    {
+      "type": "left",
+      "question": "LW44",
+      "answer": "为您查询到：LW-44/1.5发动机的生产厂商是泰州市晨阳压缩机有限公司",
+      "participle": "LW44",
+      "semantics": [
+        {
+          "result": "LW44=型号",
+          "type": "实体",
+          "number": 100
+        },
+        {
+          "result": "生产厂商",
+          "type": "继承",
+          "number": 100
+        }
+      ],
+      "model": "实体属性查询",
+      "document": "设备信息登记表.xlsx",
+      "isClick": true
+    },
+    {
+      "type": "left",
+      "question": "ZW0.84",
+      "answer": "为您查询到：ZW0.84发动机的生产厂商是泰州市晨阳压缩机有限公司。",
+      "participle": "ZW0.84",
+      "semantics": [
+        {
+          "result": "ZW0.84=型号",
+          "type": "实体",
+          "number": 100
+        },
+        {
+          "result": "生产厂商",
+          "type": "继承",
+          "number": 100
+        }
+      ],
+      "model": "实体属性查询",
+      "document": "设备信息登记表.xlsx",
+      "isClick": true
+    },
+    {
+      "type": "left",
+      "question": "D130H70",
+      "answer": "为您查询到：D130H70发动机的生产厂商是北京天高隔膜压缩机有限公司。",
+      "participle": "D130H70",
+      "semantics": [
+        {
+          "result": "D130H70=型号",
+          "type": "实体",
+          "number": 100
+        },
+        {
+          "result": "生产厂商",
+          "type": "继承",
+          "number": 100
+        }
+      ],
+      "model": "实体属性查询",
+      "document": "设备信息登记表.xlsx",
+      "isClick": true
+    },
+    {
+      "type": "left",
+      "question": "ZW3.3",
+      "answer": "为您查询到：ZW3.3发动机的生产厂商是江西气体压缩机有限公司。",
+      "participle": "ZW3.3",
+      "semantics": [
+        {
+          "result": "ZW3.3=型号",
+          "type": "实体",
+          "number": 100
+        },
+        {
+          "result": "生产厂商",
+          "type": "继承",
+          "number": 100
+        }
+      ],
+      "model": "实体属性查询",
+      "document": "设备信息登记表.xlsx",
+      "isClick": true
+    },
+    {
+      "type": "left",
+      "question": "1.小数智能机器人和普通智能机器人有什么区别？",
+      "answer": "小数智能机器人和普通智能机器人有什么区别",
+      "participle": "",
+      "semantics": [],
+      "model": "",
+      "document": "",
+      "isClick": true
+    },
+    {
+      "type": "left",
+      "question": "2.小数智能问答机器人能解答哪些问题？",
+      "answer": "小数智能问答机器人能解答哪些问题",
+      "participle": "",
+      "semantics": [],
+      "model": "",
+      "document": "",
+      "isClick": true
+    },
+    {
+      "type": "left",
+      "question": "3.小数智能问答机器人适合应用在哪些场景",
+      "answer": "小数智能问答机器人适合应用在哪些场景",
+      "participle": "",
+      "semantics": [],
+      "model": "",
+      "document": "",
+      "isClick": true
+    },
+    {
+      "type": "left",
+      "question": "我们这个压缩机是晨阳生产的吗",
+      "answer": "请问您咨询的发动机型号是？",
+      "more": ["LW44", "ZW0.84", "D130H70 ", "ZW3.3"],
+      "participle": "我们 | 这个 | 压缩机 | 是 | 晨阳 | 生产 | 的 | 吗",
+      "semantics": [
+        {
+          "result": "压缩机=设备",
+          "type": "实体",
+          "number": 100
+        },
+        {
+          "result": "晨阳=泰州市晨阳压缩机有限公司=公司",
+          "type": "实体",
+          "number": 100
+        },
+        {
+          "result": "生产厂商",
+          "type": "属性",
+          "number": 100
+        }
+      ],
+      "model": "关系推理模块",
+      "document": "设备信息登记表.xlsx",
+      "isClick": true
+    }
+  ]
 }

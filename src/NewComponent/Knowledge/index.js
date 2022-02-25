@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Input, Select } from "antd";
+import { ArrowRightOutlined } from "@ant-design/icons";
 import axios from "axios";
 import "./style.less";
 
@@ -55,7 +56,7 @@ const Knowledge = () => {
                 }}
               >
                 <div className="top">
-                  <div className="pic"></div>
+                  <div className="pic">{item.name.substring(0, 1)}</div>
 
                   <div className="word">
                     <div className="name">{item.name}</div>
@@ -76,6 +77,10 @@ const Knowledge = () => {
                 <div className="time">
                   <span>最近访问</span>
                   <span className="date">{item.time}</span>
+                </div>
+
+                <div className="join">
+                  <ArrowRightOutlined />
                 </div>
               </div>
             );

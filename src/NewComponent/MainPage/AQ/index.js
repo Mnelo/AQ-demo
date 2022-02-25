@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Input, Button } from "antd";
+import { Input, Button, Tooltip } from "antd";
+import { QuestionCircleOutlined } from "@ant-design/icons";
 import axios from "axios";
-import { getFileEx } from "../../../func/fileExtension";
+import IconFont from "../../../func/IconFont/index";
+import { switchIcon } from "../../../func/SwitchIcon/index";
 import jiqiren from "../../../Asset/Image/jiqiren.svg";
 import rentou from "../../../Asset/Image/rentou.svg";
 import noData from "../../../Asset/Image/zanwuneirong.svg";
@@ -9,7 +11,22 @@ import load from "../../../Asset/Image/three-dots.svg";
 import "./style.less";
 
 const AQ = () => {
-  const [AQData, setAQData] = useState([]);
+  const [AQData, setAQData] = useState([
+    {
+      type: "left",
+      answer:
+        "你好，我是您的智能问答机器人小数，很高兴为您服务。您可以试试点击以下问题：",
+      more: [
+        "1.小数智能机器人和普通智能机器人有什么区别？",
+        "2.小数智能问答机器人能解答哪些问题？",
+        "3.小数智能问答机器人适合应用在哪些场景",
+      ],
+      participle: "",
+      semantics: [],
+      model: "",
+      document: "",
+    },
+  ]);
   const [inputValue, setInputValue] = useState("");
   const [analysis, setAnalysis] = useState({});
 
@@ -33,56 +50,29 @@ const AQ = () => {
   /**
    * @description 发送搜索信息
    */
-  const send = async () => {
+  const send = async (inputValue) => {
     if (inputValue) {
       let newAQData = [
         ...AQData,
         ...[
-          <div className="right-box">
-            <div className="q-head-img">
-              <img src={rentou} alt="" className="icon" />
-            </div>
-            <div className="q-content">{inputValue}</div>
-          </div>,
-          <div className="left-box">
-            <div className="a-head-img">
-              <img src={jiqiren} alt="" className="icon" />
-            </div>
-            <div className="a-content">
-              <img src={load} alt="" className="load" />
-            </div>
-          </div>,
+          { type: "right", answer: inputValue },
+          { type: "left", loading: true, answer: "未搜索到结果" },
         ],
       ];
 
       setAQData(newAQData);
+
       setInputValue("");
 
       const res = await getAnswer(inputValue);
 
       if (res.answer) {
-        newAQData[newAQData.length - 1] = (
-          <div className="left-box">
-            <div className="a-head-img">
-              <img src={jiqiren} alt="" className="icon" />
-            </div>
-            <div className="a-content">{res.answer}</div>
-          </div>
-        );
-
-        setAnalysis(res);
+        newAQData[newAQData.length - 1] = res;
       } else {
-        newAQData[newAQData.length - 1] = (
-          <div className="left-box">
-            <div className="a-head-img">
-              <img src={jiqiren} alt="" className="icon" />
-            </div>
-            <div className="a-content">未搜索到结果</div>
-          </div>
-        );
-        setAnalysis(analysis);
+        newAQData[newAQData.length - 1].loading = false;
       }
 
+      setAnalysis(res);
       setAQData(newAQData);
       setInputValue(undefined);
 
@@ -94,13 +84,103 @@ const AQ = () => {
     }
   };
 
-  /**
-   * @description 获取文件后缀图标
-   */
-  const fileEx = (value) => {
-    const word = value.split(".");
+  const clickStatus = (e, type) => {
+    let dom = "";
 
-    return getFileEx(word[word.length - 1]);
+    if (e.target.nodeName === "svg") {
+      dom = e.target;
+    } else {
+      dom = e.target.parentNode;
+    }
+
+    if (dom.style.color === "rgb(18, 110, 227)") {
+      dom.style.color = "rgb(0, 0, 0)";
+
+      return;
+    }
+
+    if (type === "good") {
+      dom.parentNode.nextElementSibling.children[0].style.color =
+        "rgb(0, 0, 0)";
+    } else {
+      dom.parentNode.previousElementSibling.children[0].style.color =
+        "rgb(0, 0, 0)";
+    }
+
+    dom.style.color = "rgb(18, 110, 227)";
+  };
+
+  const getContent = (data) => {
+    if (data.type === "left") {
+      if (data.loading) {
+        return (
+          <div className="left-box">
+            <div className="a-head-img">
+              <img src={jiqiren} alt="" className="icon" />
+            </div>
+            <div className="a-content">
+              <img src={load} alt="" className="load" />
+            </div>
+          </div>
+        );
+      }
+
+      return (
+        <div className="left-box">
+          <div className="a-head-img">
+            <img src={jiqiren} alt="" className="icon" />
+          </div>
+          <div className="a-content">
+            <div>{data.answer}</div>
+            {data.more &&
+              data.more.map((item) => {
+                return (
+                  <div
+                    className="question"
+                    key={item}
+                    onClick={() => {
+                      send(item);
+                    }}
+                  >
+                    {item}
+                  </div>
+                );
+              })}
+          </div>
+
+          {data.isClick ? (
+            <>
+              <IconFont
+                type="icon-dianzan"
+                className="good"
+                onClick={(e) => {
+                  clickStatus(e, "good");
+                }}
+              />
+
+              <IconFont
+                type="icon-diancai"
+                className="down"
+                onClick={(e) => {
+                  clickStatus(e, "down");
+                }}
+              />
+            </>
+          ) : null}
+        </div>
+      );
+    }
+
+    if (data.type === "right") {
+      return (
+        <div className="right-box">
+          <div className="q-head-img">
+            <img src={rentou} alt="" className="icon" />
+          </div>
+          <div className="q-content">{data.answer}</div>
+        </div>
+      );
+    }
   };
 
   return (
@@ -111,7 +191,7 @@ const AQ = () => {
         <div className="left">
           <div className="AQ-scroll" id="srcollAQ">
             {AQData.map((item) => {
-              return item;
+              return getContent(item);
             })}
           </div>
           <div className="input-box">
@@ -123,12 +203,19 @@ const AQ = () => {
                 setInputValue(e.target.value);
               }}
             />
-            <Button type="primary" className="send" onClick={send}>
+            <Button
+              type="primary"
+              className="send"
+              onClick={() => {
+                send(inputValue);
+              }}
+            >
               发送
             </Button>
           </div>
         </div>
         <div className="right">
+          <div className="title">问答分析</div>
           {JSON.stringify(analysis) === "{}" ? (
             <div className="no-data">
               <img src={noData} alt="" />
@@ -139,14 +226,14 @@ const AQ = () => {
             </div>
           ) : (
             <>
-              <div className="title">问答分析</div>
-
               <div className="tag">分词</div>
-
               <div className="word-content">{analysis.participle}</div>
-
-              <div className="tag">语义理解</div>
-
+              <div className="tag">
+                <span>语义理解</span>
+                <Tooltip title="语义理解展现通过NLU和知识网络进行语义分析后提取到的实体、属性和计算意图，并进行打分。">
+                  <QuestionCircleOutlined className="que" />
+                </Tooltip>
+              </div>
               <div className="l-a">
                 {analysis.semantics &&
                   analysis.semantics.map((item, index) => {
@@ -162,22 +249,14 @@ const AQ = () => {
                     );
                   })}
               </div>
-
               <div className="tag">出话模块</div>
-
               <div className="word-content">{analysis.model}</div>
-
               <div className="tag">关联文档</div>
-
               <div className="word-content">
-                {analysis.document ? (
-                  <img
-                    src={fileEx(analysis.document)}
-                    alt=""
-                    className="icon"
-                  />
-                ) : null}
-                {analysis.document}
+                {analysis.document
+                  ? switchIcon("file", analysis.document)
+                  : null}
+                <span className="word">{analysis.document}</span>
               </div>
             </>
           )}

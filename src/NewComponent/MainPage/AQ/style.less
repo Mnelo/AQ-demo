@@ -50,6 +50,29 @@
             .load {
               width: 80px;
             }
+
+            .question {
+              margin: 14px 0 0 0;
+              color: #126ee3;
+              font-size: 14px;
+              cursor: pointer;
+
+              .word:hover {
+                border-bottom: 1px solid #126ee3;
+              }
+            }
+          }
+
+          .good {
+            float: left;
+            margin: 40px 6px 0 10px;
+            cursor: pointer;
+          }
+
+          .down {
+            float: left;
+            margin: 40px 0 0 0;
+            cursor: pointer;
           }
         }
 
@@ -142,6 +165,14 @@
         font-weight: 500;
         color: rgba(0, 0, 0, 0.85);
         line-height: 22px;
+
+        .que {
+          margin: 0 0 0 4px;
+        }
+
+        .que:hover {
+          color: #3461ec;
+        }
       }
 
       .word-content {
@@ -155,6 +186,12 @@
         .icon {
           width: 20px;
           margin: -3px 4px 0 0;
+        }
+
+        .word:hover {
+          cursor: pointer;
+          border-bottom: 1px solid #3461ec;
+          color: #3461ec;
         }
       }
 
@@ -179,7 +216,7 @@
           }
 
           .result {
-            width: 240px;
+            width: 270px;
           }
 
           .type {
