@@ -44,7 +44,10 @@ export default class Factor extends Component {
 		);
 
 		const { list } = data;
-
+    (list || []).forEach((item)=>{      
+        const arr = item.result.des.split(item.result.light)
+       item.result.des = arr;
+    })
 		this.setState({
 			data: list,
 		});
@@ -313,7 +316,7 @@ export default class Factor extends Component {
 					</Form>
 				</Modal>
 				<Modal
-					title="现象描述"
+					title=""
 					wrapClassName="infoModal"
 					visible={checkModalVisible}
 					destroyOnClose={true}
@@ -324,21 +327,19 @@ export default class Factor extends Component {
 					}}
 					footer={null}
 				>
-					<Form layout="vertical" initialValues={reasonData}>
-						<Form.Item label="现象描述" name="des">
-							<Input.TextArea disabled className="input-area" />
-						</Form.Item>
-
-						<Form.Item label="意图匹配结果" name="result1">
-							<Input disabled></Input>
-						</Form.Item>
-						<Form.Item label="图匹配结果" name="result2">
-							<Input disabled></Input>
-						</Form.Item>
-						<Form.Item label="参数匹配结果" name="result3">
-							<Input disabled></Input>
-						</Form.Item>
-					</Form>
+          <div className='title'>现象描述</div>
+          <p className='result'>
+            {reasonData.des.length > 1? 
+            <>{reasonData.des[0]} <span className='light'>{reasonData.light}</span>{reasonData.des[1]}</> 
+            : <>{reasonData.des[0]} <span  className='light'>{reasonData.light}</span></>
+            }
+          </p>
+          <div className='title'>意图匹配结果</div>
+          <p className='result'>{reasonData.result1}</p>
+          <div className='title'>图匹配结果</div>
+          <p className='result'>{reasonData.result2}</p>
+          <div className='title'>参数匹配结果</div>
+          <p className='result'>{reasonData.result3}</p>
 				</Modal>
 			</div>
 		);
