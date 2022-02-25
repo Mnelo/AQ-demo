@@ -68,7 +68,7 @@ const CreateModal = props => {
             取消
           </Button>
           <Button type="primary" onClick={e => {
-            onCreate({ ...causeData, matchType: '人工添加' });
+            onCreate({ ...causeData });
           }}>
             创建
           </Button>

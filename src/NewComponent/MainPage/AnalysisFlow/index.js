@@ -59,9 +59,7 @@ class AnalysisFlow extends Component {
     this.setState(
       {
         questionInfo: obj,
-      },
-      () => {
-        this.next();
+        current:1
       }
     );
   };

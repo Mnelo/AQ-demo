@@ -9,7 +9,7 @@
 		.textarea {
 			width: 1016px;
 			height: 114px;
-      resize: none;
+			resize: none;
 		}
 	}
 
@@ -69,9 +69,13 @@
 }
 
 .addModal {
+	.ant-modal-content {
+		min-width: 640px;
+	}
+
 	.des {
 		display: inline-block;
-		margin: 35px 6px 0 45px;
+		margin: 35px 6px 0 15px;
 	}
 	.create {
 		color: #5d81f0;
@@ -91,6 +95,31 @@
 	.input-area {
 		display: inline-block;
 		height: 108px !important;
-    resize: none;
+		resize: none;
+	}
+
+	.title {
+		font-size: 16px;
+		font-family: PingFangSC-Medium, PingFang SC;
+		font-weight: 600;
+		color: rgba(0, 0, 0, 0.85);
+    margin-top: 32px;
+    padding-bottom: 8px;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+
+    &:first-child{
+      margin-top: 0;
+    }
+	}
+	.result {
+		font-size: 14px;
+		font-family: PingFangSC-Regular, PingFang SC;
+		font-weight: 400;
+		color: rgba(0, 0, 0, 0.65);
+    margin-top: 8px;
+
+    .light{
+      color: #126EE3 ;
+    }
 	}
 }

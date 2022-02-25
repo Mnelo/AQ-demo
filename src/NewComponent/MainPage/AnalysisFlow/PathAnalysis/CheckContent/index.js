@@ -103,61 +103,64 @@ const CheckContent = props => {
         <Button onClick={e => setVisible(false)}>返回</Button>
       </div>
 
-      <div className="main">
-        <div className="path-info">
-          <h1>路径信息</h1>
+      <div className="column-wrap">
+        <div className="main">
+          <div className="path-info">
+            <h1>路径信息</h1>
 
-          <div className="detail">
-            <p className="p-item">
-              <span className="label-name">问题现象</span>：
-              <span>{showData.phenomenon}</span>
-            </p>
+            <div className="detail">
+              <p className="p-item">
+                <span className="label-name">问题现象</span>：
+                <span>{showData.phenomenon}</span>
+              </p>
 
-            <p className="p-item">
-              <span className="label-name">问题根因</span>：
-              <span>{showData.cause}</span>
-            </p>
+              <p className="p-item">
+                <span className="label-name">问题根因</span>：
+                <span>{showData.cause}</span>
+              </p>
 
-            <p className="p-item">
-              <span className="label-name">归因路径</span>：
-              <span>{showData.path}</span>
-            </p>
+              <p className="p-item">
+                <span className="label-name">归因路径</span>：
+                <span>{showData.path}</span>
+              </p>
 
-            <p className="p-item">
-              <span className="label-name">置信分</span>：
-              <span>{showData.score}</span>
-            </p>
+              <p className="p-item">
+                <span className="label-name">置信分</span>：
+                <span>{showData.score}</span>
+              </p>
+            </div>
+
+            <div className="table-box">
+              <Table
+                dataSource={showData.checkList || []}
+                columns={columns}
+                className="path-analysis-table"
+                rowKey={record => record.name}
+                tableLayout="fixed"
+                scroll={{ x: '100%' }}
+              />
+            </div>
           </div>
+          <div className="relation-exp">
+            <h2>相关案例</h2>
 
-          <div className="table-box">
-            <Table
-              dataSource={showData.checkList || []}
-              columns={columns}
-              className="path-analysis-table"
-              rowKey={record => record.name}
-              tableLayout="fixed"
-              scroll={{ x: '100%' }}
-            />
-          </div>
-        </div>
-        <div className="relation-exp">
-          <h2>相关案例</h2>
+            <div className="exp-list">
+              <ul>
+                {(showData.file || []).map((item, index) => {
+                  return (
+                    <li className="exp-item" key={index}>
+                      <span className="icon">{switchIcon('file', item)}</span>
+                      <span className="file-name">{item}</span>
+                    </li>
+                  )
+                })}
 
-          <div className="exp-list">
-            <ul>
-              {(showData.file || []).map((item, index) => {
-                return (
-                  <li className="exp-item" key={index}>
-                    <span className="icon">{switchIcon('file', item)}</span>
-                    <span className="file-name">{item}</span>
-                  </li>
-                )
-              })}
-
-            </ul>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
+
 
       {/* 更新排查结果弹窗 */}
       <UpdateModal

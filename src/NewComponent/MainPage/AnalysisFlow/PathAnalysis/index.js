@@ -60,7 +60,7 @@ const PathAnalysis = (props) => {
         ...data,
         "score": 100,
         "status": "未采纳",
-        "path": "容量损失 - 负极侧隔膜出现黑斑 - 碳负极脱粉粘结到隔膜表面 - 电池局部高温 - 电池极化放电 - 电池卷心内存在有活性物质附粉",
+        "path": "人工添加",
         "file": [
           "锂离子电池隔膜黑斑造成低压原因分析.pdf",
           "化成容量损失失效分析报告20190312.ppt",
@@ -124,8 +124,8 @@ const PathAnalysis = (props) => {
       width: 280,
     },
     {
-      title: <span className="table-th-title">{"匹配类型"}</span>,
-      dataIndex: "matchType",
+      title: <span className="table-th-title">{"归因路径"}</span>,
+      dataIndex: "path",
       ellipsis: true,
       width: 230,
     },
