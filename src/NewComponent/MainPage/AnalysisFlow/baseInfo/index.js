@@ -1,12 +1,21 @@
-import React, { Component } from 'react'
+import React, { Component, createRef } from 'react'
 import { Form, Input, Button } from 'antd'
 import './index.less'
 export default class BaseInfo extends Component {
+  ref = createRef();
 	//提交
 	onFinish = (data) => {
 		this.props.saveProblem(data)
-		// this.props.next();
 	}
+
+  componentDidUpdate = (preProps) =>{
+    const { questionInfo } = this.props
+    if(preProps.questionInfo !== this.props.questionInfo &&
+			this.props.current === 0){
+      console.log(this.ref);
+      this.ref.current.resetFields();
+    }
+  }
 
 	render() {
 		return (
@@ -18,6 +27,7 @@ export default class BaseInfo extends Component {
 						initialValues={{ remember: true }}
 						onFinish={this.onFinish}
 						autoComplete="off"
+            ref={this.ref}
 					>
 						<Form.Item
 							label="问题主体"
@@ -57,8 +67,8 @@ export default class BaseInfo extends Component {
 								autoSize={{ minRows: 5, maxRows: 10 }}
 							/>
 						</Form.Item>
-						<div className="btn-box">
-							<Form.Item wrapperCol={{ offset: 8, span: 16 }}>
+						<div className="flow-footer">
+							<Form.Item>
 								<Button
 									type="primary"
 									htmlType="submit"

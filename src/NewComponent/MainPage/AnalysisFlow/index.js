@@ -85,6 +85,7 @@ class AnalysisFlow extends Component {
               next={this.next}
               prev={this.prev}
               saveProblem={this.saveProblem}
+              questionInfo={questionInfo}
             />
           </div>
 

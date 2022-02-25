@@ -81,7 +81,7 @@ export default class Factor extends Component {
 					...newData,
 					{
 						name: item.name,
-						type: '图匹配',
+						type: item.type,
 						status: newstatus,
 						score: item.score,
             result: item.result
