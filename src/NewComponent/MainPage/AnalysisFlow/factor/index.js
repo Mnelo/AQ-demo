@@ -23,11 +23,11 @@ export default class Factor extends Component {
 	}
 
 	componentDidUpdate(preProps) {
-		const { data } = this.state;
-		const isChange = preProps.questionInfo.question !== this.props.questionInfo.question 
+		const isChange = preProps.questionInfo.question !== this.props.questionInfo.question;
+
 		if (
 			preProps.current !== this.props.current &&
-			this.props.current === 1 && (isChange || data && data.length === 0)
+			this.props.current === 1 && isChange
 		) {
       this.getListData();
 		}

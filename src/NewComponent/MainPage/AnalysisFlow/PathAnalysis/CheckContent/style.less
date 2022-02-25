@@ -1,10 +1,17 @@
 .path-check-drawer-content {
+  position: relative;
+  min-width: 1400px;
   padding-top: 64px;
-  overflow: auto;
-  background-color: #f8f8f8;
+
+  .column-wrap {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    background-color: #f8f8f8;
+  }
 
   .header {
-    position: fixed;
+    position: absolute;
     z-index: 9;
     top: 0;
     left: 0;
@@ -17,15 +24,14 @@
 
   .main {
     display: flex;
-    min-width: calc(100% - 48px);
     min-height: calc(100vh - 48px - 64px);
-    margin: 24px;
     background-color: #fff;
   }
 
   .path-info {
     flex: 1;
     padding: 24px;
+    min-width: 0;
 
     h1 {
       height: 44px;
