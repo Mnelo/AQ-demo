@@ -6,10 +6,20 @@
 */
 
 import React, { memo, useState, useEffect } from 'react';
-import { Button, Table } from 'antd';
+import { Button, Timeline } from 'antd';
 import { switchIcon } from '../SwitchIcon';
 import UpdateModal from './UpdateModal';
 import './style.less';
+
+const { Item: TimeItem } = Timeline;
+const pickColor = status => {
+  switch (status) {
+    case '未匹配': return { cn: 'unmatch', color: '#bfbfbf' };
+    case '已匹配': return { cn: 'match', color: '#52C41A' };
+    case '已排除': return { cn: 'exclude', color: '#F5222D' };
+    default: return { cn: 'unmatch', color: '#bfbfbf' };
+  }
+}
 
 const CheckContent = props => {
   const { setVisible, defaultInfo } = props;
@@ -19,6 +29,10 @@ const CheckContent = props => {
 
   useEffect(() => {
     document.body.classList.add('hide-scroll');
+
+    window.addEventListener('scroll', e => {
+      console.log(e)
+    })
 
     return () => document.body.classList.remove('hide-scroll');
   }, [])
@@ -67,36 +81,6 @@ const CheckContent = props => {
     setUpdateVisible(false);
   }
 
-  // 定义表格列
-  const columns = [
-    {
-      title: <span className="table-th-title">{'因子名'}</span>,
-      dataIndex: 'name',
-      ellipsis: true,
-      width: 350
-    },
-    {
-      title: <span className="table-th-title">{'因子状态'}</span>,
-      dataIndex: 'status',
-      ellipsis: true,
-      width: 150
-    },
-    {
-      title: <span className="table-th-title">{'检测方法'}</span>,
-      dataIndex: 'method',
-      ellipsis: true,
-      width: 250
-    },
-    {
-      title: <span className="table-th-title">{'操作项'}</span>,
-      ellipsis: true,
-      width: 150,
-      render: record => (
-        <span className="to-check-btn" onClick={e => onUpdate(e, record)}>更新排查结果</span>
-      )
-    }
-  ];
-
   return (
     <div className="path-check-drawer-content">
       <div className="header">
@@ -109,41 +93,74 @@ const CheckContent = props => {
             <h1>路径信息</h1>
 
             <div className="detail">
-              <p className="p-item">
-                <span className="label-name">问题现象</span>：
-                <span>{showData.phenomenon}</span>
-              </p>
+              <div className="col">
+                <p className="p-item">
+                  <span className="label-name">问题现象</span>：
+                  <span className="info">{showData.phenomenon}</span>
+                </p>
 
-              <p className="p-item">
-                <span className="label-name">问题根因</span>：
-                <span>{showData.cause}</span>
-              </p>
+                <p className="p-item">
+                  <span className="label-name">归因路径</span>：
+                  <span className="info">{showData.path}</span>
+                </p>
+              </div>
 
-              <p className="p-item">
-                <span className="label-name">归因路径</span>：
-                <span>{showData.path}</span>
-              </p>
+              <div className="col">
+                <p className="p-item">
+                  <span className="label-name">问题根因</span>：
+                  <span className="info">{showData.cause}</span>
+                </p>
 
-              <p className="p-item">
-                <span className="label-name">置信分</span>：
-                <span>{showData.score}</span>
-              </p>
+                <p className="p-item">
+                  <span className="label-name">置信分</span>：
+                  <span className="info">{showData.score}</span>
+                </p>
+              </div>
             </div>
 
             <div className="table-box">
-              <Table
-                dataSource={showData.checkList || []}
-                columns={columns}
-                className="path-analysis-table"
-                rowKey={record => record.name}
-                tableLayout="fixed"
-                scroll={{ x: '100%' }}
-              />
+              <h1>路径分析</h1>
+
+              <div className="time-tree">
+                <Timeline mode="alternate">
+                  {(showData.checkList || []).map((data, index) => {
+                    const { name, status, method } = data;
+                    const { cn, color } = pickColor(status);
+
+                    return (
+                      <TimeItem
+                        key={index}
+                        className={`time-tree-item ${cn}`}
+                        dot={<span className='circle' style={{ backgroundColor: status === '已匹配' ? '#126ee3' : '#bfbfbf' }} />}
+                      >
+                        <div className="time-item">
+                          <p className="row">
+                            <span className="name-l">因子名称：</span>
+                            <span className="word-l">{name}</span>
+                          </p>
+
+                          <p className="row">
+                            <span className="name-m">因子状态：</span>
+                            <span className='circle' style={{ backgroundColor: color }} />
+                            <span className="word-m">{status}</span>
+                          </p>
+
+                          <p className="row">
+                            <span className="name-m">检测方法：</span>
+                            <span className="word-m">{method}</span>
+                          </p>
+
+                          <p className="row"><span className="to-check-btn" onClick={e => onUpdate(e, data)}>更新</span></p>
+                        </div>
+                      </TimeItem>
+                    )
+                  })}
+                </Timeline>
+              </div>
             </div>
           </div>
           <div className="relation-exp">
             <h2>相关案例</h2>
-
             <div className="exp-list">
               <ul>
                 {(showData.file || []).map((item, index) => {
@@ -154,13 +171,11 @@ const CheckContent = props => {
                     </li>
                   )
                 })}
-
               </ul>
             </div>
           </div>
         </div>
       </div>
-
 
       {/* 更新排查结果弹窗 */}
       <UpdateModal

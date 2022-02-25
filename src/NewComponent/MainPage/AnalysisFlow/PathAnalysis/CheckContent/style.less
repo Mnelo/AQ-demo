@@ -1,7 +1,8 @@
 .path-check-drawer-content {
   position: relative;
   min-width: 1400px;
-  padding-top: 64px;
+  // overflow: auto;
+  // padding-top: 64px;
 
   .column-wrap {
     display: flex;
@@ -11,7 +12,7 @@
   }
 
   .header {
-    position: absolute;
+    position: fixed;
     z-index: 9;
     top: 0;
     left: 0;
@@ -31,7 +32,6 @@
   .path-info {
     flex: 1;
     padding: 24px;
-    min-width: 0;
 
     h1 {
       height: 44px;
@@ -45,9 +45,15 @@
     }
 
     .detail {
-      padding: 0 30px;
+      display: flex;
+      padding: 24px 30px 0;
+
+      .col {
+        width: 50%;
+      }
 
       .p-item {
+        display: flex;
         margin-bottom: 32px;
 
         .label-name {
@@ -56,25 +62,77 @@
           text-align: justify;
           width: 56px;
           font-size: 14px;
+          flex-shrink: 0;
+        }
+
+        .info {
+          display: inline-block;
+          width: calc(90% - 56px);
         }
       }
     }
 
-    // 表格
-    .path-analysis-table {
-      .ant-table-thead>tr>th:not(:last-child):not(.ant-table-selection-column):not(.ant-table-row-expand-icon-cell):not([colspan]):before {
-        display: none;
+    .time-tree {
+      padding-top: 72px;
+
+      .time-item {
+        padding: 0 20px;
+        transform: translateY(-20%);
       }
 
-      .to-check-btn {
-        display: inline-block;
-        height: 22px;
-        font-size: 14px;
-        color: #5D81F0;
-        line-height: 22px;
-        cursor: pointer;
-        user-select: none;
+      .row {
+        margin-bottom: 4px;
       }
+
+      .name-l {
+        font-size: 16px;
+        font-family: PingFangSC-Medium, PingFang SC;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.85);
+      }
+
+      .word-l {
+        .name-l();
+        font-weight: 500;
+      }
+
+      .name-m {
+        font-size: 14px;
+        color: #333;
+      }
+
+      .word-m {
+        .name-m();
+        color: rgba(0, 0, 0, 0.65);
+        word-wrap: break-word;
+        word-break: break-all;
+      }
+
+      .circle {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin: 0 8px;
+        border-radius: 50%;
+        line-height: 22px;
+        transform: translateY(1px);
+      }
+
+      .time-tree-item {
+        &.match .ant-timeline-item-tail {
+          border-color: #126EE3;
+        }
+      }
+    }
+
+    .to-check-btn {
+      display: inline-block;
+      height: 22px;
+      font-size: 14px;
+      color: #5D81F0;
+      line-height: 22px;
+      cursor: pointer;
+      user-select: none;
     }
   }
 
@@ -134,9 +192,15 @@
   
   .ant-drawer-body {
     overflow: auto;
+    margin-top: 64px;
+    height: calc(100vh - 64px);
     padding: 0;
     line-height: inherit;
     background-color: #fff;
+
+    &::-webkit-scrollbar {
+      background-color: #f8f8f8;
+    }
   }
 }
 
