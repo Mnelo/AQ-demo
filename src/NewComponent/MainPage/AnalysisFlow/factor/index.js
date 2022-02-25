@@ -23,13 +23,15 @@ export default class Factor extends Component {
 	}
 
 	componentDidUpdate(preProps) {
-		const isChange = preProps.questionInfo.question !== this.props.questionInfo.question;
+		const isChange =
+			preProps.questionInfo.question !== this.props.questionInfo.question;
 
 		if (
 			preProps.current !== this.props.current &&
-			this.props.current === 1 && isChange
+			this.props.current === 1 &&
+			isChange
 		) {
-      this.getListData();
+			this.getListData();
 		}
 	}
 
@@ -44,10 +46,10 @@ export default class Factor extends Component {
 		);
 
 		const { list } = data;
-    (list || []).forEach((item)=>{      
-        const arr = item.result.des.split(item.result.light)
-       item.result.des = arr;
-    })
+		(list || []).forEach((item) => {
+			const arr = item.result.des.split(item.result.light);
+			item.result.des = arr;
+		});
 		this.setState({
 			data: list,
 		});
@@ -82,6 +84,7 @@ export default class Factor extends Component {
 						type: '图匹配',
 						status: newstatus,
 						score: item.score,
+            result: item.result
 					},
 				];
 			} else {
@@ -186,14 +189,20 @@ export default class Factor extends Component {
 	};
 
 	render() {
-		const { data, addModalVisible, checkModalVisible, reasonData } = this.state;
+		const { data, addModalVisible, checkModalVisible, reasonData } =
+			this.state;
 		const { questionInfo } = this.props;
-		const des =questionInfo.question +'在' + questionInfo.position + '出现了' + questionInfo.des;
+		const des =
+			questionInfo.question +
+			'在' +
+			questionInfo.position +
+			'出现了' +
+			questionInfo.des;
 		return (
 			<div className="factor">
 				<div className="top">
-					<p>您的问题描述为</p>
-					<Input.TextArea className="textarea" value={des} disabled />
+					<p>您的问题描述为:</p>
+					<div className="textarea">{des}</div>
 				</div>
 				<div className="add-btn">
 					<Button type="default" onClick={this.add}>
@@ -209,7 +218,7 @@ export default class Factor extends Component {
 					/>
 				</div>
 				{/* <div className="footer-box"> */}
-          <div className='flow-footer'>
+				<div className="flow-footer">
 					<Button
 						type="default"
 						onClick={() => {
@@ -272,10 +281,10 @@ export default class Factor extends Component {
 								rules={[
 									{ required: true, message: '选择不能为空' },
 								]}
-                style={{
-                  display: 'inline-block',
-                  width: '51%'
-                }}
+								style={{
+									display: 'inline-block',
+									width: '51%',
+								}}
 							>
 								<Select style={{}}>
 									<Option value="逻辑因子1">逻辑因子1</Option>
@@ -327,19 +336,31 @@ export default class Factor extends Component {
 					}}
 					footer={null}
 				>
-          <div className='title'>现象描述</div>
-          <p className='result'>
-            {reasonData.des.length > 1? 
-            <>{reasonData.des[0]} <span className='light'>{reasonData.light}</span>{reasonData.des[1]}</> 
-            : <>{reasonData.des[0]} <span  className='light'>{reasonData.light}</span></>
-            }
-          </p>
-          <div className='title'>意图匹配结果</div>
-          <p className='result'>{reasonData.result1}</p>
-          <div className='title'>图匹配结果</div>
-          <p className='result'>{reasonData.result2}</p>
-          <div className='title'>参数匹配结果</div>
-          <p className='result'>{reasonData.result3}</p>
+					<div className="title">现象描述</div>
+					<p className="result">
+						{reasonData.des.length > 1 ? (
+							<>
+								{reasonData.des[0]}{' '}
+								<span className="light">
+									{reasonData.light}
+								</span>
+								{reasonData.des[1]}
+							</>
+						) : (
+							<>
+								{reasonData.des[0]}{' '}
+								<span className="light">
+									{reasonData.light}
+								</span>
+							</>
+						)}
+					</p>
+					<div className="title">意图匹配结果</div>
+					<p className="result">{reasonData.result1}</p>
+					<div className="title">图匹配结果</div>
+					<p className="result">{reasonData.result2}</p>
+					<div className="title">参数匹配结果</div>
+					<p className="result">{reasonData.result3}</p>
 				</Modal>
 			</div>
 		);
