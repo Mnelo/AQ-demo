@@ -127,6 +127,16 @@ export default class Factor extends Component {
 			render: (text, record) => {
 				return (
 					<div>
+            {
+              record.type === '人工匹配' ?
+              <span
+							onClick={() => {
+								this.check(text.result);
+							}}
+							className="discheck"
+						>
+							查看原因
+						</span> :
 						<span
 							onClick={() => {
 								this.check(text.result);
@@ -135,6 +145,7 @@ export default class Factor extends Component {
 						>
 							查看原因
 						</span>
+            }
 						<span className="line">|</span>
 						{record.status === '已匹配' ? (
 							<span
@@ -189,19 +200,14 @@ export default class Factor extends Component {
 	};
 
 	render() {
-		const { data, addModalVisible, checkModalVisible, reasonData } =
-			this.state;
+		const { data, addModalVisible, checkModalVisible, reasonData } = this.state;
 		const { questionInfo } = this.props;
-		const des =
-			questionInfo.question +
-			'在' +
-			questionInfo.position +
-			'出现了' +
-			questionInfo.des;
+		const des = questionInfo.question + '在' + questionInfo.position + '出现了' + questionInfo.des;
+
 		return (
 			<div className="factor">
 				<div className="top">
-					<p>您的问题描述为:</p>
+					<p className='top-label'>您的问题描述为:</p>
 					<div className="textarea">{des}</div>
 				</div>
 				<div className="add-btn">
@@ -213,11 +219,10 @@ export default class Factor extends Component {
 					<Table
 						columns={this.columns}
 						dataSource={data}
-						rowKey={(record) => record.name}
+						// rowKey={(record) => record.name }
 						pagination={{ pageSize: 5 }}
 					/>
 				</div>
-				{/* <div className="footer-box"> */}
 				<div className="flow-footer">
 					<Button
 						type="default"
@@ -250,6 +255,7 @@ export default class Factor extends Component {
 							addModalVisible: false,
 						});
 					}}
+         
 				>
 					<Form
 						name="basic"
@@ -263,6 +269,7 @@ export default class Factor extends Component {
 						<Form.Item
 							label="语义片段"
 							name="question"
+              className='input-padding'
 							rules={[
 								{ required: true, message: '输入不能为空' },
 							]}
@@ -273,7 +280,7 @@ export default class Factor extends Component {
 								placeholder="请输入问题描述中的语义片段"
 							/>
 						</Form.Item>
-						<Form.Item>
+						<Form.Item className='input-padding'>
 							<Form.Item
 								label="选择应匹配的逻辑因子"
 								name="position"
