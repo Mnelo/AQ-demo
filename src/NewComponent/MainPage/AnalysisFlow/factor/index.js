@@ -128,7 +128,7 @@ export default class Factor extends Component {
 				return (
 					<div>
             {
-              record.type === '人工匹配' ?
+              record && record.type === '人工匹配' ?
               <span
 							onClick={() => {
 								this.check(text.result);
@@ -147,7 +147,7 @@ export default class Factor extends Component {
 						</span>
             }
 						<span className="line">|</span>
-						{record.status === '已匹配' ? (
+						{ record && record.status === '已匹配' ? (
 							<span
 								className="text"
 								onClick={(e) => {
@@ -189,7 +189,8 @@ export default class Factor extends Component {
 				score: 100,
 			},
 		];
-		const newData = obj.concat(data);
+		const newData = data ? obj.concat(data) : obj;
+    console.log(newData.length);
 		this.setState(
 			{
 				addModalVisible: false,
@@ -219,7 +220,9 @@ export default class Factor extends Component {
 					<Table
 						columns={this.columns}
 						dataSource={data}
-						// rowKey={(record) => record.name }
+						rowKey={(record) =>{
+              return record && record.name
+            }  }
 						pagination={{ pageSize: 5 }}
 					/>
 				</div>
