@@ -56,12 +56,11 @@ const AQ = () => {
         ...AQData,
         ...[
           { type: "right", answer: inputValue },
-          { type: "left", loading: true, answer: "未搜索到结果" },
+          { type: "left", loading: true, answer: "很抱歉，你的问题我还没有学会，我会继续努力的！", isClick: true },
         ],
       ];
 
       setAQData(newAQData);
-
       setInputValue("");
 
       const res = await getAnswer(inputValue);
@@ -199,6 +198,9 @@ const AQ = () => {
               className="input-t"
               placeholder={"输入文字进行对话～"}
               value={inputValue}
+              onPressEnter={() => {
+                send(inputValue);
+              }}
               onChange={(e) => {
                 setInputValue(e.target.value);
               }}
@@ -244,7 +246,7 @@ const AQ = () => {
                         <div className="type">
                           <span className="word">{item.type}</span>
                         </div>
-                        <div className="number">{item.number}</div>
+                        <div className={`number ${item.number < 100 && 'warn'}`}>{item.number}</div>
                       </div>
                     );
                   })}

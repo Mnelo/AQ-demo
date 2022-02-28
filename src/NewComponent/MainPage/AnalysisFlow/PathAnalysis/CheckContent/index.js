@@ -16,23 +16,19 @@ const pickColor = status => {
   switch (status) {
     case '未匹配': return { cn: 'unmatch', color: '#bfbfbf' };
     case '已匹配': return { cn: 'match', color: '#52C41A' };
-    case '已排除': return { cn: 'exclude', color: '#F5222D' };
+    case '已排除': return { cn: 'exclude', color: '#bfbfbf' };
     default: return { cn: 'unmatch', color: '#bfbfbf' };
   }
 }
 
 const CheckContent = props => {
-  const { setVisible, defaultInfo } = props;
+  const { setVisible, defaultInfo, onUpdate: onParentUpdate } = props;
   const [showData, setShowData] = useState({});
   const [updateVisible, setUpdateVisible] = useState(false); // 更新结果弹窗
   const [updateInfo, setUpdateInfo] = useState({}); // 更新的行数据
 
   useEffect(() => {
     document.body.classList.add('hide-scroll');
-
-    window.addEventListener('scroll', e => {
-      console.log(e)
-    })
 
     return () => document.body.classList.remove('hide-scroll');
   }, [])
@@ -84,7 +80,10 @@ const CheckContent = props => {
   return (
     <div className="path-check-drawer-content">
       <div className="header">
-        <Button onClick={e => setVisible(false)}>返回</Button>
+        <Button onClick={e => {
+          onParentUpdate(showData);
+          setVisible(false);
+        }}>返回</Button>
       </div>
 
       <div className="column-wrap">
@@ -141,7 +140,7 @@ const CheckContent = props => {
 
                           <p className="row">
                             <span className="name-m">因子状态：</span>
-                            <span className='circle' style={{ backgroundColor: color }} />
+                            <span className='circle small' style={{ backgroundColor: color }} />
                             <span className="word-m">{status}</span>
                           </p>
 

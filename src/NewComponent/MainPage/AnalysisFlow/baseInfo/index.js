@@ -9,7 +9,6 @@ export default class BaseInfo extends Component {
 	}
 
   componentDidUpdate = (preProps) =>{
-    const { questionInfo } = this.props
     if(preProps.questionInfo !== this.props.questionInfo &&
 			this.props.current === 0){
       console.log(this.ref);

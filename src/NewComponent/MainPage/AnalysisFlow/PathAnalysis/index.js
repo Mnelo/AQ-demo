@@ -104,6 +104,15 @@ const PathAnalysis = (props) => {
     setCreateVisible(false);
   };
 
+  // 更新排查结果
+  const onUpdate = data => {
+    const { index, checkList } = data;
+    const newTable = JSON.parse(JSON.stringify(tableData));
+    newTable[index].checkList = checkList;
+    newTable[index].status = checkList.length && checkList.every(item => item.status === '已匹配') ? '已采纳' : '未采纳';
+    setTableData(newTable);
+  };
+
   // 点击下一步
   const onNext = () => {
     next();
@@ -145,8 +154,8 @@ const PathAnalysis = (props) => {
       title: <span className="table-th-title">{"操作项"}</span>,
       ellipsis: true,
       width: 100,
-      render: (record) => (
-        <span className="to-check-btn" onClick={(e) => toCheck(e, record)}>
+      render: (_, record, index) => (
+        <span className="to-check-btn" onClick={(e) => toCheck(e, {...record, index})}>
           去排查
         </span>
       ),
@@ -225,6 +234,7 @@ const PathAnalysis = (props) => {
           defaultInfo={checkInfo}
           visible={checkVisible}
           setVisible={setCheckVisible}
+          onUpdate={onUpdate}
         />
       </Drawer>
     </div>
